@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.song-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    background-color: black;
+    color: white;
+}
+.img-back {
+    background-image: url(/static/css/imgs/back.png);
+    background-size: cover;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+}
+#mainTheme {
+    margin-left: 15px;
+}
+
+
+#mychord {
+    white-space: pre;
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+    line-height: 0.5;
+}
+
+#mylyc {
+    font-size: 20px;
+    line-height: 0.5;
+}
+
+strong {
+    font-size: 17px;
+}
+
+#mainContainer {
+    grid-area: lyricchord;
+    margin: 10px;
+}
+
+#mainImageDiv {
+    grid-area: images;
+    text-align: center;
+}
+img {
+    width: 80px;
+    height: 90px;
+}
+#pianoDiv #pianoChords {
+    width: 130px;
+}
+#bassDiv #bassChords {
+    width: 180px;
+    height: 450px;
+}
+
+#mainContainer {
+    display: grid;
+    grid-template-areas: 
+    'lyricchord images';
+    grid-column-gap: 2px;
+}
+
+@media (max-width: 500px) {
+    #mainTheme {
+        font-size: 20px;
+    }
+    #mychord {
+        font-size: 16px;
+        min-width: 310px;
+    }
+    #mylyc {
+        font-size: 16px;
+    }
+}

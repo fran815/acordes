@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.song-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    background-color: black;
+    color: white;
+}
+
+.menu-div{
+    display: flex;
+}
+
+#lyricsChords {
+    margin-left: 10px;
+}
+.img-back {
+    background-image: url(/static/css/imgs/back.png);
+    background-size: cover;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+}
+#mainTheme {
+    margin-left: 15px;
+}
+
+
+/* MENU */
+.menu-items {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: 15px;
+}
+.selectors {
+    margin-left: 15px;
+}
+#id_tones {
+    height: 30px;
+    border-radius: 5px;
+}
+#btn-submit {
+    height: 30px;
+}
+
+
+/* radio buttons */
+.visual-tones-div {
+    margin-left: auto;
+}
+.radio-div {
+    display: inline-flex;
+    overflow: hidden;
+    border-radius: 7px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+
+    margin-inline: 10px;
+}
+.radio-input {
+    display: none;
+}
+.radio-label {
+    width: 40px;
+    text-align: center;
+    padding: 8px 14px;
+    font-size: 12px;
+    font-family: sans-serif;
+    color: black;
+    background: rgba(255, 255, 255, 0.349);
+    cursor: pointer;
+    transition: background 0.1s;
+}
+.radio-label:not(:last-of-type) {
+    border-right: 1px solid gray;
+}
+.radio-input:checked + .radio-label {
+    background: black;
+    color: white;
+}
+
+
+#mychord {
+    white-space: pre;
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+    line-height: 0.5;
+}
+
+#mylyc {
+    font-size: 20px;
+    line-height: 0.5;
+}
+
+strong {
+    font-size: 17px;
+}
+
+#mainContainer {
+    grid-area: lyricchord;
+}
+
+#mainImageDiv {
+    grid-area: images;
+    text-align: center;
+}
+img {
+    width: 80px;
+    height: 90px;
+}
+#pianoDiv #pianoChords {
+    width: 130px;
+}
+#bassDiv #bassChords {
+    width: 180px;
+    height: 450px;
+}
+
+#mainContainer {
+    display: grid;
+    grid-template-areas: 
+    'lyricchord images';
+    grid-column-gap: 2px;
+}
+
+@media (max-width: 500px) {
+    /* #lyricsChords {
+        font-size: 16px;
+        min-width: 310px;
+    }
+    strong {
+        font-size: 16px;
+    } */
+    .menu-items{
+        margin-left: 5px;
+    }
+    #mainTheme {
+        font-size: 20px;
+    }
+    #mychord {
+        font-size: 16px;
+        min-width: 310px;
+    }
+    .img-back {
+        width: 25px;
+        height: 25px;
+    }
+    #mylyc {
+        font-size: 16px;
+    }
+
+}

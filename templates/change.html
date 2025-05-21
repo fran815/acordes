@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/change.css') }}">
+    <title>Cambio de tono</title>
+</head>
+<body>
+    <div class="body-container">
+        <div class="song-header">
+            <a class="back-btn" href="{{ url_for('index') }}">
+                <div class="img-back"></div>
+            </a>
+            <h1 id="mainTheme">{{ msg[0] }}</h1>
+        </div>
+        
+        <h3 style="margin-left: 10px;">Tono: {{ msg[2] }}</h3>
+        
+        <div id="mainContainer">
+            <!-- DISPLAY CHORDS AND LIRYCS -->
+            <div id="lyricsChords">
+                {% for x in range(chp|length) %}
+                    <p id="mychord">{{ chp[x] }}</p>
+                    <p id="mylyc">{{ ts['lirycs'][x] }}</p>
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

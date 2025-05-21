@@ -1,0 +1,165 @@
+body {
+    margin: 10px;
+    font-family: sans-serif;
+}
+/* TITLE */
+.main-title {
+    width: 100%;
+}
+
+
+/* MAIN DIV */
+.main-div {
+    display: flex;
+}
+
+
+/* LIST SECTION */
+.list-main-section {
+    width: 60%;
+    height: 600px;
+    margin-left: 5px;
+    /* background-color: red; */
+}
+.list-section {
+    width: 100%;
+    height: 550px;
+    overflow-y: scroll;
+}
+/* LIST */
+.table-2 {
+    width: 100%;
+}
+.table-2 tr {
+    height: 40px;
+}
+.ltd-1 {
+    width: 20%;
+    text-align: center;
+    cursor: pointer;
+}
+.ltd-2 {
+    width: 80%;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* radio buttons */
+.radio-div {
+    display: inline-flex;
+    /* width: 200px; */
+    overflow: hidden;
+    border-radius: 7px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+.radio-input {
+    display: none;
+}
+.radio-label {
+    width: 40px;
+    text-align: center;
+    padding: 8px 14px;
+    font-size: 12px;
+    font-family: sans-serif;
+    color: black;
+    background: rgba(255, 255, 255, 0.349);
+    cursor: pointer;
+    transition: background 0.1s;
+}
+.radio-label:not(:last-of-type) {
+    border-right: 1px solid gray;
+}
+.radio-input:checked + .radio-label {
+    background: black;
+    color: white;
+}
+
+
+/* TABLE 1 */
+.table-main-sections {
+    display: flex;
+    width: 40%;
+}
+.table-div {
+    width: 360px;
+}
+.table-1 {
+    width: 100%;
+    text-align: left;
+    border-spacing: 0;
+    /* border-collapse: collapse; */
+
+    margin-block: 10px;
+
+    background: rgba(207, 207, 207, 0.37);
+    border-radius: 10px;
+    box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.table-1 th {
+    text-align: center;
+}
+.table-1 tr {
+    height: 35px;
+}
+.table-1 .td-1 {
+    width: 80%;
+    text-align: center;
+}
+.table-1 .td-2 {
+    width: 20%;
+}
+
+/* SEARCHER DIV */
+.searcher-div {
+    display: flex;
+    align-items: center;
+}
+#item-srch {
+    margin-inline: 15px;
+}
+
+
+
+/* RESPONSIVE */
+@media (max-width:650px) {
+    body {
+        background-color: white;
+        margin: 0;
+    }
+
+
+    /* title */
+    .main-title {
+        text-align: center;
+    }
+
+    /* main div */
+    .main-div {
+        flex-direction: column;
+    }
+
+
+    /* list section */
+    .list-main-section {
+        width: 100%;
+        margin-top: 35px;
+        margin-left: 0;
+    }
+
+
+    /* table */
+    .table-main-sections {
+        justify-content: center;
+        width: 100%;
+    }
+    .table-div {
+        width: 80%;
+    }
+    .table-1 {
+        text-align: center;
+    }
+    
+}

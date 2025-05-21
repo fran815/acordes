@@ -1,0 +1,108 @@
+<!DOCTYPE html>    
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/song.css') }}">
+    <title>Letra y acordes</title>
+</head>
+<body>
+
+    <div class="body-container">
+        <!-- <a class="back-btn" href="{{ url_for('index') }}">Volver</a> -->
+
+        <div>
+            <form action="/tone" method="post">
+                <div class="song-header">
+                    <a class="back-btn" href="{{ url_for('index') }}">
+                        <div class="img-back"></div>
+                    </a>
+                    <h1 id="mainTheme">{{ ts['name'] }}</h1>
+                </div>
+                
+                <input type="text" value="{{ ts['name'] }}" name="song_name_id" hidden>
+
+                <div class="menu-div">
+                    <div class="menu-items">
+                        <h3>Tono: {{ ts['tone'] }}</h3>
+
+                        <input type="text" value="{{ ts['tone'] }}" name="song_tone_id" hidden>
+
+                        <div class="selectors">
+                            <select name="tones" id="id_tones">
+                                <option value="Do">Do</option>
+                                <!-- <option value="Do#">Do#</option> -->
+                                <option value="Re">Re</option>
+                                <!-- <option value="Re#">Re#</option> -->
+                                <option value="Mi">Mi</option>
+                                <option value="Fa">Fa</option>
+                                <!-- <option value="Fa#">Fa#</option> -->
+                                <option value="Sol">Sol</option>
+                                <!-- <option value="Sol#">Sol#</option> -->
+                                <option value="La">La</option>
+                                <!-- <option value="La#">La#</option> -->
+                                <option value="Si">Si</option>
+                            </select>
+                            <button type="submit" id="btn-submit">Cambiar</button>
+                        </div>
+
+                        <div class="visual-tones-div">
+                            <div class="radio-div" id="item-srch">
+                                <input type="radio" class="radio-input" value="numero" name="myRadio" id="radio1" onclick="toWatch()" checked>
+                                <label for="radio1" class="radio-label">Mirar</label>
+
+                                <input type="radio" class="radio-input" value="nombre" name="myRadio" id="radio2" onclick="toUnwatch()">
+                                <label for="radio2" class="radio-label">Ocultar</label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+        <br>
+        
+        <div id="mainContainer">
+            <!-- DISPLAY CHORDS AND LIRYCS -->
+            <div id="lyricsChords">
+                {% if ts['chords']|length == ts['lirycs']|length %}
+                    {% for x in range(ts['chords']|length) %}
+                            <p id="mychord" class="everyChord">{{ ts['chords'][x] }}</p>
+                        <p id="mylyc">{{ ts['lirycs'][x] }}</p>
+                    {% endfor %}
+                {% endif %}
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+<script>
+    function toWatch() {
+        var myChord = document.getElementsByClassName('everyChord');
+        var selector = document.getElementById('id_tones');
+        var btn = document.getElementById('btn-submit');
+
+        for (let i = 0; i < myChord.length; i++) {
+            myChord[i].style.display = "block";
+        }
+
+        selector.disabled = false;
+        btn.disabled = false;
+    }
+
+    function toUnwatch() {
+        var myChord = document.getElementsByClassName('everyChord');
+        var selector = document.getElementById('id_tones');
+        var btn = document.getElementById('btn-submit');
+
+        for (let i = 0; i < myChord.length; i++) {
+            myChord[i].style.display = "none";
+        }
+
+        selector.disabled = true;
+        btn.disabled = true;
+    }
+</script>
+</html>
