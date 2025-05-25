@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/selector.css') }}">
+    <title>Home</title>
+</head>
+<body>
+    <!-- <h1 class="main-title">Grupo de Alabanza</h1> -->
+     <div class="main-header">
+        <a class="back-btn" href="{{ url_for('index') }}">
+            <div class="img-back"></div>
+        </a>
+        <h1 style="margin-left: 15px;">Crear lista</h1>
+     </div>
+
+    <div class="main-div">
+        <!-- --------------------------------------------EDIT WINDOW---------------------------------------------- -->
+        <div class="main-edit-window" id="main-edit-window">
+            <div class="close-edit-window">
+                <div class="close-area">
+                    <div id="close-img" onclick="closeEdition()">
+                        <p>X</p>
+                    </div>
+                </div>
+            </div>
+            <div class="edit-window">
+                <div class="edit-menu-area">
+                    <h4>¿Por cuál canción desea cambiar?</h4>
+                    <div class="song-changed-div">
+                        <input type="text" id="song-changed" disabled>
+                    </div>
+                    <div class="edit-buttons">
+                        <button onclick="updateSongForm()" id="save-id" disabled>Guardar cambio</button>
+                    </div>
+                    
+                    <!-- SEND THE ORDER TO UPDATE  -->
+                    <form action="/update" method="post" id="update-song-form">
+                        <input type="number" name="indx-change" id="indx-change" hidden>
+                        <input type="text" id="song_input2" name="songInput" hidden>
+                    </form>
+
+                    <div class="edit-table-area">
+                        
+                        <div class="searcher-div">
+                            <div class="radio-div" id="item-srch">
+                                <input type="radio" class="radio-input2" value="numero" name="myRadio" id="radio3">
+                                <label for="radio3" class="radio-label2" onclick="searchNumber2()">Número</label>
+
+                                <input type="radio" class="radio-input2" value="nombre" name="myRadio" id="radio4">
+                                <label for="radio4" class="radio-label2" onclick="searchName2()">Nombre</label>
+                            </div>
+                            <div id="item-srch">
+                                <input type="text" class="form-control" id="input-search-name2" placeholder="Buscar...">
+                                <input type="number" class="form-control" id="input-search-number2" placeholder="Buscar..." hidden>
+                            </div>
+                            <!-- <form action="">
+                                <input type="text" id="song_input2" name="songInput" hidden>
+                            </form> -->
+                        </div>
+
+                        <br>
+
+                        <div class="list-section">
+                            <table class="table-2">
+                                <th>Número</th>
+                                <th>Nombre</th>
+                                <tbody id="mytableBody-2">
+                                    <tr>
+                                        <td class="ltd-1">1</td>
+                                        <td class="ltd-2" onclick="mySelection2(this)">Amor es</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ltd-1">2</td>
+                                        <td class="ltd-2" onclick="mySelection2(this)">Lo debes compartir</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ltd-1">3</td>
+                                        <td class="ltd-2" onclick="mySelection2(this)">El espíritu de Dios está</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ltd-1">4</td>
+                                        <td class="ltd-2" onclick="mySelection2(this)">Majestuoso</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ltd-1">5</td>
+                                        <td class="ltd-2" onclick="mySelection2(this)">Mi amado Jesús</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ltd-1">6</td>
+                                        <td class="ltd-2" onclick="mySelection2(this)">Tu amor por mi</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ltd-1">7</td>
+                                        <td class="ltd-2" onclick="mySelection2(this)">Vine a adorar a Dios</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ltd-1">8</td>
+                                        <td class="ltd-2" onclick="mySelection2(this)">Eres mi todo Dios</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ltd-1">9</td>
+                                        <td class="ltd-2" onclick="mySelection2(this)">Agnus Dei</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ltd-1">10</td>
+                                        <td class="ltd-2" onclick="mySelection2(this)">Ven espíritu ven</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="ltd-1">11</td>
+                                        <td class="ltd-2" onclick="mySelection2(this)">Señor quién entrará</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ltd-1">12</td>
+                                        <td class="ltd-2" onclick="mySelection2(this)">Usa mi vida</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ltd-1">13</td>
+                                        <td class="ltd-2" onclick="mySelection2(this)">Que mi vida entera esté</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ltd-1">14</td>
+                                        <td class="ltd-2" onclick="mySelection2(this)">Quiero darte el honor</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ltd-1">15</td>
+                                        <td class="ltd-2" onclick="mySelection2(this)">Salmo 19 (La ley de Jehová)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ltd-1">16</td>
+                                        <td class="ltd-2" onclick="mySelection2(this)">A Jehová cantaré</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ltd-1">17</td>
+                                        <td class="ltd-2" onclick="mySelection2(this)">Solo en Jesús</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ltd-1">18</td>
+                                        <td class="ltd-2" onclick="mySelection2(this)">10000 razones</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ltd-1">19</td>
+                                        <td class="ltd-2" onclick="mySelection2(this)">Cuán grande es Él</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ltd-1">20</td>
+                                        <td class="ltd-2" onclick="mySelection2(this)">Gozo por verte</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ----------------------------------------------------------------------------------------------------- -->
+
+        <div class="table-main-sections" id="table-main-sections">
+            <h2>Selección de canciones</h2>
+            <div class="table-div">
+                <table class="table-1" id="myTable">
+                    <th colspan="4">Programa musical</th>
+                    <tbody id="table-selector">
+                        {% for x in myData %}
+                        <tr>
+                            <td class="td-0">
+                                <!-- {{ loop.index }} -->
+                                {{ x[0] }}
+                            </td>
+                            <td class="td-1">
+                                {{ x[1] }}
+                            </td>
+                            <td class="td-2" onclick="editRow()">
+                                <p id="edit-btn">Editar</p>
+                            </td>
+                            <td class="td-3" onclick="deleteRow()">
+                                <p id="oneDelet-btn">Eliminar</p>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <form action="">
+                    <input type="text" id="edit-item" placeholder="edit" hidden>
+                </form>
+                <form action="/delete" method="post" id="del-form">
+                    <input type="text" id="delet-item" name="song-deleted" hidden>
+                </form>
+            </div>
+            <div class="btn-section">
+                <div>
+                    <button class="changeBtn" id="save-btn" onclick="saveList()">Guardar cambios</button>
+                </div>
+                <div>
+                    <button class="changeBtn" id="delet-btn" onclick="deleteList()">Limpiar lista</button>
+                </div>
+            </div>
+            <div>
+                <form action="/add_changes" method="post" id="addChanges-form">
+                    <input type="text" id="save-changes" name="save-changes" hidden>
+                </form>
+                <form action="/delete_all" method="post" id="deleteAll-form">
+                    <input type="text" id="delete-response" name="delete-response" hidden>
+                </form>
+            </div>
+        </div>
+
+        <div class="list-main-section" id="list-main-section">
+            <!-- <div id="list-title">
+                <h2>Buscador</h2>
+            </div> -->
+            <div class="searcher-div">
+                <div class="radio-div" id="item-srch">
+                    <input type="radio" class="radio-input" value="numero" name="myRadio" id="radio1">
+                    <label for="radio1" class="radio-label" onclick="searchNumber()">Número</label>
+
+                    <input type="radio" class="radio-input" value="nombre" name="myRadio" id="radio2">
+                    <label for="radio2" class="radio-label" onclick="searchName()">Nombre</label>
+                </div>
+                <div id="item-srch">
+                    <input type="text" class="form-control" id="input-search-name" placeholder="Buscar...">
+                    <input type="number" class="form-control" id="input-search-number" placeholder="Buscar..." hidden>
+                </div>
+                <form action="/add" method="post" id="myForm">
+                    <input type="text" id="song_input" name="songInput" hidden>
+                </form>
+            </div>
+
+            <br>
+
+            <div class="list-section">
+                <table class="table-2">
+                    <th>Número</th>
+                    <th>Nombre</th>
+                    <tbody id="mytableBody">
+                        <tr>
+                            <td class="ltd-1">1</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Amor es</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">2</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Lo debes compartir</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">3</td>
+                            <td class="ltd-2" onclick="mySelection(this)">El espíritu de Dios está</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">4</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Majestuoso</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">5</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Mi amado Jesús</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">6</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Tu amor por mi</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">7</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Vine a adorar a Dios</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">8</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Eres mi todo Dios</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">9</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Agnus Dei</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">10</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Ven espíritu ven</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="ltd-1">11</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Señor quién entrará</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">12</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Usa mi vida</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">13</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Que mi vida entera esté</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">14</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Quiero darte el honor</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">15</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Salmo 19 (La ley de Jehová)</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">16</td>
+                            <td class="ltd-2" onclick="mySelection(this)">A Jehová cantaré</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">17</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Solo en Jesús</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">18</td>
+                            <td class="ltd-2" onclick="mySelection(this)">10000 razones</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">19</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Cuán grande es Él</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">20</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Gozo por verte</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+<script>
+
+    function searchNumber() {
+        document.getElementById("input-search-number").addEventListener("input", onInputChangeNumber);
+
+        var nameElement = document.getElementById("input-search-name");
+        var numberElement = document.getElementById("input-search-number");
+
+        nameElement.value = "";
+        numberElement.value = "";
+
+        nameElement.style.display = "none";
+        numberElement.style.display = "block";
+    }
+
+    function searchName() {
+        document.getElementById("input-search-name").addEventListener("input", onInputChangeName);
+
+        var nameElement = document.getElementById("input-search-name");
+        var numberElement = document.getElementById("input-search-number");
+
+        nameElement.value = "";
+        numberElement.value = "";
+
+        nameElement.style.display = "block";
+        numberElement.style.display = "none";
+    }
+
+    function searchNumber2() {
+        document.getElementById("input-search-number2").addEventListener("input", onInputChangeNumber2);
+
+        var nameElement = document.getElementById("input-search-name2");
+        var numberElement = document.getElementById("input-search-number2");
+
+        nameElement.value = "";
+        numberElement.value = "";
+
+        nameElement.style.display = "none";
+        numberElement.style.display = "block";
+    }
+
+    function searchName2() {
+        document.getElementById("input-search-name2").addEventListener("input", onInputChangeName2);
+
+        var nameElement = document.getElementById("input-search-name2");
+        var numberElement = document.getElementById("input-search-number2");
+
+        nameElement.value = "";
+        numberElement.value = "";
+
+        nameElement.style.display = "block";
+        numberElement.style.display = "none";
+    }
+
+    // TEXT SEARCHER --------------------------------------------------------------------------
+    function onInputChangeNumber() {
+        let inputText = document.getElementById("input-search-number").value.toString();
+        let tableBody = document.getElementById('mytableBody');
+        let tableRows = tableBody.getElementsByTagName("tr");
+        
+        for (let i=0; i<tableRows.length; i++){
+            let textConsult = tableRows[i].cells[0].textContent.toString();
+            if (textConsult.indexOf(inputText) === -1){
+                tableRows[i].style.visibility = "collapse";
+            }
+            else {
+                tableRows[i].style.visibility = "";
+            }
+        }
+    }
+    function onInputChangeName() {
+        let inputText = document.getElementById("input-search-name").value.toString().toLowerCase();
+        let tableBody = document.getElementById('mytableBody');
+        let tableRows = tableBody.getElementsByTagName("tr");
+        
+        for (let i=0; i<tableRows.length; i++){
+            let textConsult = tableRows[i].cells[1].textContent.toString().toLocaleLowerCase();
+            if (textConsult.indexOf(inputText) === -1){
+                tableRows[i].style.visibility = "collapse";
+            }
+            else {
+                tableRows[i].style.visibility = "";
+            }
+        }
+    }
+    
+    function onInputChangeNumber2() {
+        let inputText = document.getElementById("input-search-number2").value.toString();
+        let tableBody = document.getElementById('mytableBody-2');
+        let tableRows = tableBody.getElementsByTagName("tr");
+        
+        for (let i=0; i<tableRows.length; i++){
+            let textConsult = tableRows[i].cells[0].textContent.toString();
+            if (textConsult.indexOf(inputText) === -1){
+                tableRows[i].style.visibility = "collapse";
+            }
+            else {
+                tableRows[i].style.visibility = "";
+            }
+        }
+    }
+    function onInputChangeName2() {
+        let inputText = document.getElementById("input-search-name2").value.toString().toLowerCase();
+        let tableBody = document.getElementById('mytableBody-2');
+        let tableRows = tableBody.getElementsByTagName("tr");
+        
+        for (let i=0; i<tableRows.length; i++){
+            let textConsult = tableRows[i].cells[1].textContent.toString().toLocaleLowerCase();
+            if (textConsult.indexOf(inputText) === -1){
+                tableRows[i].style.visibility = "collapse";
+            }
+            else {
+                tableRows[i].style.visibility = "";
+            }
+        }
+    }
+
+
+
+    // SONG SELECTOR -------------------------------------------------------------------------
+    function mySelection(x) {
+        var myInput = document.getElementById('song_input');
+        var values = x.innerText
+        
+        myInput.value = values;
+        
+        document.getElementById('myForm').submit();
+    }
+    function mySelection2(x) {
+        var myInput = document.getElementById('song-changed');
+        var sendInput = document.getElementById('song_input2');
+        var inputText = document.getElementById("input-search-name2");
+        var inputNumb = document.getElementById("input-search-number2");
+        var myButton = document.getElementById('save-id');
+
+        var values = x.innerText
+        
+        myInput.value = values;
+        sendInput.value = values;
+        myButton.disabled = false;
+
+        inputText.value = "";
+        inputNumb.value = "";
+        
+        //document.getElementById('myForm2').submit();
+    }
+
+
+    // EDITABLE CLOSE BUTTON  ---------------------------------------------------------------
+    function closeEdition() {
+        let div1 = document.getElementById('main-edit-window');
+        let div2 = document.getElementById('table-main-sections');
+        let div3 = document.getElementById('list-main-section');
+
+        let edtInput = document.getElementById('indx-change');
+        let songChanger = document.getElementById('song-changed');
+
+        songChanger.value = "";
+        edtInput.value = 0;
+
+        div1.style.display = "none";
+        div2.style.display = "flex";
+        div3.style.display = "flex";
+    }
+
+
+    // SELECTION ROWS -----------------------------------------------------------------------
+    function deleteRow() {
+        let table = document.getElementById('myTable'),rIndex;
+        let delInput = document.getElementById('delet-item');
+        let deletes = document.getElementById('del-form');
+        
+        for (let i=1; i<table.rows.length; i++) {
+            
+            table.rows[i].onclick = function() 
+            {
+                let response = this.cells[1].innerText;
+                delInput.value = response;
+                deletes.submit()
+            }
+        }
+    }
+
+    function editRow() {
+        let table = document.getElementById('myTable'),rIndex;
+        // divs
+        let div1 = document.getElementById('main-edit-window');
+        let div2 = document.getElementById('table-main-sections');
+        let div3 = document.getElementById('list-main-section');
+
+        
+        let edtInput = document.getElementById('indx-change');
+        let songChanger = document.getElementById('song-changed');
+        var sendInput = document.getElementById('song_input2');
+
+        div1.style.display = "flex";
+        div2.style.display = "none";
+        div3.style.display = "none";
+
+        sendInput.value = "";
+
+        songChanger.value = "";
+        edtInput.value=0;
+        
+        for (let i=1; i<table.rows.length; i++) {
+            
+            table.rows[i].onclick = function() 
+            {
+                let response = this.cells[0].innerText;
+                let intNumb = parseInt(response, 10);
+                edtInput.value = intNumb;
+            }
+        }
+    }
+
+    // SAVE UPDATES BUTTON
+    function updateSongForm() {
+        let myUpdate = document.getElementById('update-song-form');
+
+        myUpdate.submit()
+    }
+
+    // DELETE ALL ELEMENTS FROM THE LIST
+    function deleteList() {
+        let myDeleteAll = document.getElementById('deleteAll-form');
+        let myResponse = document.getElementById('delete-response');
+
+        if (confirm("¿Desea eliminar la lista completa?")) {
+            myResponse.value = "si";
+            myDeleteAll.submit()
+        } 
+        else {
+            alert("Gracias por confirmar...")
+        }
+    }
+
+    function saveList() {
+        let myData = document.getElementById('myTable');
+        let changes = document.getElementById('save-changes');
+        let saveAll = document.getElementById('addChanges-form');
+
+        let changeList = [];
+
+        for (let i=1; i<myData.rows.length; i++) {
+            let data = myData.rows[i].cells[1].textContent.toString();
+            changeList.push(data.trim());
+        }
+
+        console.log(changeList);
+
+        // GET THE MUSIC LIST
+        if (changeList.length > 1) {
+            changes.value = changeList;
+            alert("¡La lista se ha editado exitosamente!")
+            saveAll.submit()
+        }
+        else {
+            alert("La lista no puede estar vacía.")
+        }
+    }
+
+</script>
+
+</html>

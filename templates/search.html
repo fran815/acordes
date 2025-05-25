@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/search.css') }}">
+    <title>Buscar</title>
+</head>
+<body>
+    <div class="main-div">
+        
+        <div class="main-header">
+            <div class="button-area">
+                <a href="{{ url_for('index') }}">
+                    <div class="img-div"></div>
+                </a>
+            </div>
+            <div>
+                <h1>Buscar canción</h1>
+            </div>
+        </div>
+
+
+        <br>
+
+        <div class="list-main-section" id="list-main-section">
+            <div class="searcher-div">
+                <div class="radio-div" id="item-srch">
+                    <input type="radio" class="radio-input" value="numero" name="myRadio" id="radio1">
+                    <label for="radio1" class="radio-label" onclick="searchNumber()">Número</label>
+
+                    <input type="radio" class="radio-input" value="nombre" name="myRadio" id="radio2">
+                    <label for="radio2" class="radio-label" onclick="searchName()">Nombre</label>
+                </div>
+                <div id="item-srch">
+                    <input type="text" class="form-control" id="input-search-name" placeholder="Buscar...">
+                    <input type="number" class="form-control" id="input-search-number" placeholder="Buscar..." hidden>
+                </div>
+                <form action="/song" method="post" id="myForm">
+                    <input type="text" id="song_input" name="songInput" hidden>
+                </form>
+            </div>
+
+            <br>
+
+            <div class="list-section">
+                <table class="table-2">
+                    <th>Número</th>
+                    <th>Nombre</th>
+                    <tbody id="mytableBody">
+                        <tr>
+                            <td class="ltd-1">1</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Amor es</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">2</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Lo debes compartir</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">3</td>
+                            <td class="ltd-2" onclick="mySelection(this)">El espíritu de Dios está</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">4</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Majestuoso</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">5</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Mi amado Jesús</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">6</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Tu amor por mi</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">7</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Vine a adorar a Dios</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">8</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Eres mi todo Dios</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">9</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Agnus Dei</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">10</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Ven espíritu ven</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="ltd-1">11</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Señor quién entrará</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">12</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Usa mi vida</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">13</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Que mi vida entera esté</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">14</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Quiero darte el honor</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">15</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Salmo 19 (La ley de Jehová)</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">16</td>
+                            <td class="ltd-2" onclick="mySelection(this)">A Jehová cantaré</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">17</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Solo en Jesús</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">18</td>
+                            <td class="ltd-2" onclick="mySelection(this)">10000 razones</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">19</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Cuán grande es Él</td>
+                        </tr>
+                        <tr>
+                            <td class="ltd-1">20</td>
+                            <td class="ltd-2" onclick="mySelection(this)">Gozo por verte</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<script>
+    function searchNumber() {
+        document.getElementById("input-search-number").addEventListener("input", onInputChangeNumber);
+
+        var nameElement = document.getElementById("input-search-name");
+        var numberElement = document.getElementById("input-search-number");
+
+        nameElement.value = "";
+        numberElement.value = "";
+
+        nameElement.style.display = "none";
+        numberElement.style.display = "block";
+    }
+
+    function searchName() {
+        document.getElementById("input-search-name").addEventListener("input", onInputChangeName);
+
+        var nameElement = document.getElementById("input-search-name");
+        var numberElement = document.getElementById("input-search-number");
+
+        nameElement.value = "";
+        numberElement.value = "";
+
+        nameElement.style.display = "block";
+        numberElement.style.display = "none";
+    }
+
+    // TEXT SEARCHER --------------------------------------------------------------------------
+    function onInputChangeNumber() {
+        let inputText = document.getElementById("input-search-number").value.toString();
+        let tableBody = document.getElementById('mytableBody');
+        let tableRows = tableBody.getElementsByTagName("tr");
+        
+        for (let i=0; i<tableRows.length; i++){
+            let textConsult = tableRows[i].cells[0].textContent.toString();
+            if (textConsult.indexOf(inputText) === -1){
+                tableRows[i].style.visibility = "collapse";
+            }
+            else {
+                tableRows[i].style.visibility = "";
+            }
+        }
+    }
+    function onInputChangeName() {
+        let inputText = document.getElementById("input-search-name").value.toString().toLowerCase();
+        let tableBody = document.getElementById('mytableBody');
+        let tableRows = tableBody.getElementsByTagName("tr");
+        
+        for (let i=0; i<tableRows.length; i++){
+            let textConsult = tableRows[i].cells[1].textContent.toString().toLocaleLowerCase();
+            if (textConsult.indexOf(inputText) === -1){
+                tableRows[i].style.visibility = "collapse";
+            }
+            else {
+                tableRows[i].style.visibility = "";
+            }
+        }
+    }
+
+    // SONG SELECTOR -------------------------------------------------------------------------
+    function mySelection(x) {
+        var myInput = document.getElementById('song_input');
+        var values = x.innerText.toString().toLowerCase();
+        
+        myInput.value = values;
+        
+        document.getElementById('myForm').submit();
+    }
+</script>
+
+</html>

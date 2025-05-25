@@ -1,0 +1,441 @@
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+/* HEADER */
+.main-header {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background-color: black;
+    color: white;
+}
+.img-back {
+    background-image: url(/static/css/imgs/back.png);
+    background-size: cover;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+}
+
+
+/* TITLE */
+.main-title {
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+
+/* MAIN DIV */
+.main-div {
+    display: flex;
+}
+
+
+/* LIST SECTION */
+.list-main-section {
+    flex-direction: column;
+    width: 60%;
+    height: 600px;
+    margin-left: 5px;
+    /* background-color: red; */
+}
+#list-title {
+    width: 100%;
+    text-align: center;
+}
+.list-section {
+    width: 100%;
+    height: 550px;
+    overflow-y: scroll;
+}
+.table-2 tbody tr:nth-child(even) {
+    background: radial-gradient(circle at 18.7% 37.8%, rgb(250,250,250) 0%, rgb(228, 228, 228) 90%);
+}
+/* LIST */
+.table-2 {
+    width: 100%;
+}
+.table-2 th{
+    background-color: black;
+    color: white;
+}
+.table-2 tr {
+    height: 40px;
+}
+.ltd-1 {
+    width: 20%;
+    text-align: center;
+}
+.ltd-2 {
+    width: 55%;
+    text-align: center;
+    cursor: pointer;
+}
+.ltd-3 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    /* background-color: gray; */
+}
+.ltd-3 p {
+    display: flex;
+    width: 40px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    margin-block: 2px;
+
+    color: white;
+    background-color: blue;
+    border-radius: 8px;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+/* radio buttons */
+.radio-div {
+    display: inline-flex;
+    /* width: 200px; */
+    overflow: hidden;
+    border-radius: 7px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+.radio-input {
+    display: none;
+}
+.radio-label {
+    width: 40px;
+    text-align: center;
+    padding: 8px 14px;
+    font-size: 12px;
+    font-family: sans-serif;
+    color: black;
+    background: rgba(255, 255, 255, 0.349);
+    cursor: pointer;
+    transition: background 0.1s;
+}
+.radio-label:not(:last-of-type) {
+    border-right: 1px solid gray;
+}
+.radio-input:checked + .radio-label {
+    background: black;
+    color: white;
+}
+
+/* radio 2 (edit-window)*/
+.radio-input2 {
+    display: none;
+}
+.radio-label2 {
+    width: 40px;
+    text-align: center;
+    padding: 8px 14px;
+    font-size: 12px;
+    font-family: sans-serif;
+    color: black;
+    background: rgba(255, 255, 255, 0.349);
+    cursor: pointer;
+    transition: background 0.1s;
+}
+.radio-label2:not(:last-of-type) {
+    border-right: 1px solid gray;
+}
+.radio-input2:checked + .radio-label2 {
+    background: black;
+    color: white;
+}
+
+
+/* TABLE 1 */
+.table-main-sections {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+
+    /* background-color: gray; */
+}
+.table-div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.table-1 {
+    width: 90%;
+    text-align: left;
+    border-spacing: 0;
+    /* border-collapse: collapse; */
+
+    margin-block: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+
+    /* background: rgba(207, 207, 207, 0.37);
+    border-radius: 5px;
+    box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid rgba(0, 0, 0, 0.3); */
+}
+.table-1 th {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    background-color: black;
+    color: white;
+}
+.table-1 tr {
+    display: flex;
+    height: 35px;
+}
+.table-1 .td-0 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0%;
+    color: transparent;
+}
+.table-1 .td-1 {
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+}
+.table-1 .td-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    height: 34px;
+    margin: 0;
+}
+.table-1 .td-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    height: 34px;
+    margin: 0;
+}
+/* OPTION BUTTONS */
+#edit-btn {
+    width: 100%;
+    text-align: center;
+    
+    border-radius: 5px;
+    background-color: green;
+    border: 1px solid black;
+    color: white;
+
+    cursor: pointer;
+}
+#oneDelet-btn {
+    width: 100%;
+    text-align: center;
+
+    border-radius: 5px;
+    background-color: red;
+    border: 1px solid black;
+    color: white;
+
+    cursor: pointer;
+}
+
+
+/* BUTTON AREA */
+.btn-section {
+    display: flex;
+    width: 360px;
+
+    /* background-color: red; */
+}
+.btn-section div {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+.changeBtn {
+    width: 90%;
+    height: 30px;
+    border-radius: 5px;
+}
+#save-btn {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+#delet-btn {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* SEARCHER DIV */
+.searcher-div {
+    display: flex;
+    align-items: center;
+    margin-top: 28px;
+}
+#item-srch {
+    margin-inline: 15px;
+}
+
+
+/* MAIN EDIT WINDOW */
+.close-edit-window {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+.close-area {
+    display: flex;
+    justify-content: right;
+    width: 95%;
+
+}
+#close-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-block: 5px;
+
+    background-color: red;
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+#close-img p {
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    margin: 0;
+}
+
+.song-changed-div{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+#song-changed {
+    width: 50%;
+}
+
+
+.main-edit-window {
+    /* position: fixed;
+    top: 0;
+    left: 0; */
+    
+    display: none;
+    flex-direction: column;
+    width: 100%;
+
+    background-color: white;
+}
+.edit-window {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+
+    /* background-color: red; */
+}
+.edit-menu-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+
+    /* background-color: green; */
+}
+.edit-buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-block: 10px;
+}
+.edit-buttons button {
+    width: 200px;
+    border-radius: 5px;
+
+    color: white;
+    background-color: black;
+}
+
+
+/* RESPONSIVE */
+@media (max-width:650px) {
+    body {
+        background-color: white;
+        margin: 0;
+    }
+
+
+    /* title */
+    .main-title {
+        text-align: center;
+    }
+
+    /* main div */
+    .main-div {
+        flex-direction: column;
+    }
+
+
+    /* list section */
+    .list-main-section {
+        width: 100%;
+        margin-top: 15px;
+        margin-left: 0;
+    }
+
+
+    /* table */
+    .table-main-sections {
+        justify-content: center;
+        width: 100%;
+    }
+    .table-div {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .table-1 {
+        width: 98%;
+        text-align: center;
+    }
+    .btn-section {
+        display: flex;
+        width: 100%;
+    }
+    #edit-btn {
+        font-size: 14px;
+    }
+    #oneDelet-btn {
+        font-size: 14px;
+    }
+
+    .edit-menu-area {
+        width: 100%;
+    }
+
+    #song-changed {
+        width: 80%;
+    }
+}

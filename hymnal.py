@@ -155,7 +155,7 @@ hymn = { # FOR EACH LETTER OF LIRYCS YOU HAVE TO GIVE 2-4 BLANK SPACES IN CHORDS
             #     all_chords['Sol'],all_chords['La'],all_chords['Sim']
             # ]
         },
-        'el espíritu de dios esta': {
+        'el espíritu de dios está': {
             'name': 'El espiritu de Dios está',
             'tone': 'Re',
             'lirycs': [
