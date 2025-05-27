@@ -1,6 +1,10 @@
 body {
     margin: 0px;
     font-family: sans-serif;
+
+    background-image: url(/static/css/imgs/wallpaper1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 /* HEADER */
 .main-header {
@@ -23,6 +27,11 @@ body {
 .main-title {
     margin-left: 15px;
     margin-bottom: 20px;
+}
+
+
+h2 {
+    margin: 10px;
 }
 
 
@@ -50,7 +59,7 @@ body {
     overflow-y: scroll;
 }
 .table-2 tbody tr:nth-child(even) {
-    background: radial-gradient(circle at 18.7% 37.8%, rgb(250,250,250) 0%, rgb(228, 228, 228) 90%);
+    background: radial-gradient(circle at 18.7% 37.8%, rgb(250,250,250) 0%, rgba(228, 228, 228, 0.3) 90%);
 }
 /* LIST */
 .table-2 {
@@ -164,7 +173,7 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 .table-1 {
     width: 90%;
@@ -194,7 +203,7 @@ body {
 }
 .table-1 tr {
     display: flex;
-    height: 35px;
+    height: 40px;
 }
 .table-1 .td-0 {
     display: flex;
@@ -226,25 +235,30 @@ body {
     margin: 0;
 }
 /* OPTION BUTTONS */
-#edit-btn {
-    width: 100%;
-    text-align: center;
-    
+
+.edit-img {
+    width: 25px;
+    height: 25px;
+    background-image: url(/static/css/imgs/boton-editar.png);
+    background-size: cover;
+    background-position: center;
+
     border-radius: 5px;
     background-color: green;
     border: 1px solid black;
-    color: white;
 
     cursor: pointer;
 }
-#oneDelet-btn {
-    width: 100%;
-    text-align: center;
+.trash-img {
+    width: 25px;
+    height: 25px;
+    background-image: url(/static/css/imgs/basura.png);
+    background-size: cover;
+    background-position: center;
 
     border-radius: 5px;
     background-color: red;
     border: 1px solid black;
-    color: white;
 
     cursor: pointer;
 }
@@ -403,6 +417,9 @@ body {
         width: 100%;
         margin-top: 15px;
         margin-left: 0;
+    }
+    .list-section {
+        height: 470px;
     }
 
 
