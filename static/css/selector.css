@@ -2,16 +2,14 @@ body {
     margin: 0px;
     font-family: sans-serif;
 
-    background-image: url(/static/css/imgs/wallpaper1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: #171717;
+    background: linear-gradient(365deg,rgba(23, 23, 23, 1) 0%, rgba(51, 51, 51, 1) 100%);
 }
 /* HEADER */
 .main-header {
     display: flex;
     align-items: center;
     height: 50px;
-    background-color: black;
     color: white;
 }
 .img-back {
@@ -31,7 +29,7 @@ body {
 
 
 h2 {
-    margin: 10px;
+    display: none;
 }
 
 
@@ -59,11 +57,12 @@ h2 {
     overflow-y: scroll;
 }
 .table-2 tbody tr:nth-child(even) {
-    background: radial-gradient(circle at 18.7% 37.8%, rgb(250,250,250) 0%, rgba(228, 228, 228, 0.3) 90%);
+    background: radial-gradient(circle at 18.7% 37.8%, rgb(56, 56, 56) 0%, rgb(20, 20, 20) 90%);
 }
 /* LIST */
 .table-2 {
     width: 100%;
+    color: white;
 }
 .table-2 th{
     background-color: black;
@@ -123,7 +122,7 @@ h2 {
     padding: 8px 14px;
     font-size: 12px;
     font-family: sans-serif;
-    color: black;
+    color: white;
     background: rgba(255, 255, 255, 0.349);
     cursor: pointer;
     transition: background 0.1s;
@@ -132,8 +131,10 @@ h2 {
     border-right: 1px solid gray;
 }
 .radio-input:checked + .radio-label {
-    background: black;
     color: white;
+    background: #E58632;
+    background: linear-gradient(270deg, #E58632, orangered);
+    border: 1px solid gold;
 }
 
 /* radio 2 (edit-window)*/
@@ -146,7 +147,7 @@ h2 {
     padding: 8px 14px;
     font-size: 12px;
     font-family: sans-serif;
-    color: black;
+    color: white;
     background: rgba(255, 255, 255, 0.349);
     cursor: pointer;
     transition: background 0.1s;
@@ -155,8 +156,10 @@ h2 {
     border-right: 1px solid gray;
 }
 .radio-input2:checked + .radio-label2 {
-    background: black;
     color: white;
+    background: #E58632;
+    background: linear-gradient(270deg, #E58632, orangered);
+    border: 1px solid gold;
 }
 
 
@@ -179,11 +182,11 @@ h2 {
     width: 90%;
     text-align: left;
     border-spacing: 0;
-    /* border-collapse: collapse; */
+    color: white;
 
     margin-block: 10px;
     border-radius: 5px;
-    border: 1px solid black;
+    border: 1px solid rgba(128, 128, 128, 0.233);
 
     /* background: rgba(207, 207, 207, 0.37);
     border-radius: 5px;
@@ -198,8 +201,9 @@ h2 {
     align-items: center;
     width: 100%;
 
-    background-color: black;
     color: white;
+    background: #E58632;
+    background: linear-gradient(270deg, #E58632, orangered);
 }
 .table-1 tr {
     display: flex;
@@ -282,7 +286,7 @@ h2 {
     border-radius: 5px;
 }
 #save-btn {
-    background-color: black;
+    background-color: green;
     color: white;
     font-weight: bold;
 
@@ -360,7 +364,11 @@ h2 {
     flex-direction: column;
     width: 100%;
 
-    background-color: white;
+    background: #171717;
+    background: linear-gradient(365deg,rgba(23, 23, 23, 1) 0%, rgba(51, 51, 51, 1) 100%);
+}
+h4 {
+    color: white;
 }
 .edit-window {
     display: flex;

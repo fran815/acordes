@@ -1,13 +1,17 @@
 body {
     margin: 0;
     font-family: sans-serif;
+
+    background: #171717;
+    background: linear-gradient(365deg,rgba(23, 23, 23, 1) 0%, rgba(51, 51, 51, 1) 100%);
 }
 
 .main-header {
     display: flex;
     align-items: center;
     width: 100%;
-    background-color: black;
+    color: white;
+    /* background-color: black; */
 }
 .button-area {
     width: 30px;
@@ -54,11 +58,12 @@ h1 {
     overflow-y: scroll;
 }
 .table-2 tbody tr:nth-child(even) {
-    background: radial-gradient(circle at 18.7% 37.8%, rgb(250,250,250) 0%, rgb(228, 228, 228) 90%);
+    background: radial-gradient(circle at 18.7% 37.8%, rgb(56, 56, 56) 0%, rgb(20, 20, 20) 90%);
 }
 /* LIST */
 .table-2 {
     width: 100%;
+    color: white;
 }
 .table-2 th{
     background-color: black;
@@ -118,7 +123,7 @@ h1 {
     padding: 8px 14px;
     font-size: 12px;
     font-family: sans-serif;
-    color: black;
+    color: white;
     background: rgba(255, 255, 255, 0.349);
     cursor: pointer;
     transition: background 0.1s;
@@ -127,8 +132,10 @@ h1 {
     border-right: 1px solid gray;
 }
 .radio-input:checked + .radio-label {
-    background: black;
     color: white;
+    background: #E58632;
+    background: linear-gradient(270deg, #E58632, orangered);
+    border: 1px solid gold;
 }
 
 /* radio 2 (edit-window)*/
@@ -141,7 +148,7 @@ h1 {
     padding: 8px 14px;
     font-size: 12px;
     font-family: sans-serif;
-    color: black;
+    color: white;
     background: rgba(255, 255, 255, 0.349);
     cursor: pointer;
     transition: background 0.1s;
@@ -150,6 +157,8 @@ h1 {
     border-right: 1px solid gray;
 }
 .radio-input2:checked + .radio-label2 {
-    background: black;
     color: white;
+    background: #E58632;
+    background: linear-gradient(270deg, #E58632, orangered);
+    border: 1px solid gold;
 }

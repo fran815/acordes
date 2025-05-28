@@ -32,7 +32,6 @@
         </div> -->
 
         <br>
-        <br>
 
         <div class="table-section">
             <div>
@@ -46,7 +45,7 @@
                     <tbody>
                         {% for x in canciones %}
                             <tr>
-                                <td>{{ loop.index }}.-</td>
+                                <td id="nums-counter">{{ loop.index }}. </td>
                                 {% if x[0] == "Bienvenida" or x[0] == "Especial" or x[0] == "Predicación" or x[0] == "Acción de gracias" or x[0] == "Otro" %}
                                     <td>
                                         {{ x[0] }}
@@ -94,7 +93,6 @@
         <div class="main-footer">
             <div class="footer-title">
                 <p>Iglesia Bautista El Mesías.</p>
-                <p>Lider del grupo de alabanza: Raciel Roldan.</p>
             </div>
             <!-- <div class="social-div">
                 <div class="social">
