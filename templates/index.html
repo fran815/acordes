@@ -12,6 +12,11 @@
             <div class="theme-div">
                 <h1>Grupo de alabanza</h1>
             </div>
+            <div class="group-name">
+                <p>Et Ratzon</p>
+                <div class="group-name-separ"></div>
+            </div>
+            
             <div class="options-div">
                 <div class="menu-option">
                     <a href="{{ url_for('search') }}">Himnario</a>
@@ -22,10 +27,11 @@
             </div>
         </div>
 
-        <div class="separate">
+        <!-- <div class="separate">
             <hr>
-        </div>
+        </div> -->
 
+        <br>
         <br>
 
         <div class="table-section">
@@ -36,21 +42,74 @@
             </div>
             <div class="table-div">
                 <table>
-                    <th>Canciones del programa</th>
+                    <th class="table-head" colspan="2">Programa musical</th>
                     <tbody>
                         {% for x in canciones %}
                             <tr>
-                                <td onclick="searchClick(this)">
-                                    {{ x[0] }}
-                                </td>
+                                <td>{{ loop.index }}.-</td>
+                                {% if x[0] == "Bienvenida" or x[0] == "Especial" or x[0] == "Predicación" or x[0] == "Acción de gracias" or x[0] == "Otro" %}
+                                    <td>
+                                        {{ x[0] }}
+                                    </td>
+                                {% else %}
+                                    <td onclick="searchClick(this)">
+                                        {{ x[0] }}
+                                    </td>
+                                {% endif %}
                             </tr>
                         {% endfor %}
                     </tbody>
                 </table>
             </div>
+
+            <div class="circle-menu-div">
+                <div class="circle-options-div">
+                    <div class="menu-circle-option">
+                        <a href="{{ url_for('search') }}">
+                            <div class="img-option">
+                                <div id="book"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="menu-circle-option">
+                        <a href="">
+                            <div class="img-option">
+                                <div id="music"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="menu-circle-option">
+                        <a href="{{ url_for('selector') }}">
+                            <div class="img-option">
+                                <div id="plus"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
+    <footer>
+        <div class="main-footer">
+            <div class="footer-title">
+                <p>Iglesia Bautista El Mesías.</p>
+                <p>Lider del grupo de alabanza: Raciel Roldan.</p>
+            </div>
+            <!-- <div class="social-div">
+                <div class="social">
+                    <a href="">
+                        <div id="social-img-1"></div>
+                    </a>
+                </div>
+                <div class="social">
+                    <a href="">
+                        <div id="social-img-2"></div>
+                    </a>
+                </div>
+            </div> -->
+        </div>
+    </footer>
 </body>
 
 <script>
