@@ -7,14 +7,18 @@
     <title>Home</title>
 </head>
 <body>
+
+    <div class="first-ball"></div>
+    <div class="second-ball"></div>
+
     <div class="main-div">
         <div class="main-header">
             <div class="theme-div">
                 <h1>Grupo de alabanza</h1>
             </div>
             <div class="group-name">
+                <hr class="theme-line">
                 <p>Et Ratzon</p>
-                <div class="group-name-separ"></div>
             </div>
             
             <div class="options-div">
@@ -33,6 +37,7 @@
 
         <br>
 
+        <h4 class="program-msg">Programa</h4>
         <div class="table-section">
             <div>
                 <form action="/song" method="post" id="myHomeMethod">
@@ -41,18 +46,23 @@
             </div>
             <div class="table-div">
                 <table>
-                    <th class="table-head" colspan="2">Programa musical</th>
+                    <!-- <th class="table-head" colspan="2"></th> -->
                     <tbody>
                         {% for x in canciones %}
                             <tr>
-                                <td id="nums-counter">{{ loop.index }}. </td>
                                 {% if x[0] == "Bienvenida" or x[0] == "Especial" or x[0] == "Predicación" or x[0] == "Acción de gracias" or x[0] == "Otro" %}
                                     <td>
-                                        {{ x[0] }}
+                                        <div class="element-td">
+                                            <div id="nums-counter">{{ loop.index }}. </div>
+                                            <div style="font-weight: bold; color: white; font-size: 17px;">{{ x[0] }}</div>
+                                        </div>
                                     </td>
                                 {% else %}
-                                    <td onclick="searchClick(this)">
-                                        {{ x[0] }}
+                                    <td>
+                                        <div class="element-td">
+                                            <div id="nums-counter">{{ loop.index }}. </div>
+                                            <div onclick="searchClick(this)">{{ x[0] }}</div>
+                                        </div>
                                     </td>
                                 {% endif %}
                             </tr>
@@ -92,7 +102,7 @@
     <footer>
         <div class="main-footer">
             <div class="footer-title">
-                <p>Iglesia Bautista El Mesías.</p>
+                <p>בְּרֵאשִׁית בָּרָא אֱלֹהִים</p>
             </div>
             <!-- <div class="social-div">
                 <div class="social">

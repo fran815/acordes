@@ -7,10 +7,36 @@ body {
     height: 100dvh;
     font-family: sans-serif;
 
-    background: #171717;
-    background: linear-gradient(365deg,rgba(23, 23, 23, 1) 0%, rgba(51, 51, 51, 1) 100%);
+    background: rgb(22, 2, 31);
+    background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgb(24, 3, 58) 50%, rgb(4, 7, 71) 100%);
     
 }
+
+.first-ball {
+    position: absolute;
+    top: 340px;
+    left: 200px;
+    width: 170px;
+    height: 170px;
+    z-index: -0;
+
+    border-radius: 50%;
+    background: #4075DA;
+    background: linear-gradient(112deg,rgb(45, 85, 158) 0%, rgb(68, 18, 114) 100%);
+}
+.second-ball {
+    position: absolute;
+    top: 180px;
+    left: 20px;
+    width: 120px;
+    height: 120px;
+    z-index: -0;
+
+    border-radius: 50%;
+    background: #4075DA;
+    background: linear-gradient(112deg,rgb(49, 88, 160) 0%, rgb(110, 32, 173) 100%);
+}
+
 footer {
     display: flex;
     align-items: center;
@@ -26,6 +52,11 @@ footer {
     text-align: center;
     width: 100%;
 }
+.footer-title p {
+    font-size: 23px;
+    font-family: sans-serif;
+}
+
 .social-div {
     display: flex;
     justify-content: center;
@@ -115,7 +146,13 @@ a {
     margin: 2px solid black;
 }
 
+.program-msg {
+    font-size: 19px;
+    margin-left: 15px;
+    margin-block: 10px;
 
+    color: white;
+}
 
 /* TABLE DIV */
 .table-section {
@@ -134,22 +171,22 @@ table {
     font-size: 20px;
     margin-left: 25px;
 }
-/* table th {
-    height: 35px;
-    font-size: 23px;
-    font-weight: bold;
-    
-    color: black;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-} */
 tbody tr {
-    color: black;
-    height: 32px;
+    height: 60px;
+    margin-block: 10px;
 }
 tbody td {
     cursor: pointer;
-    height: 30px;
+}
+
+.element-td {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
 }
 
 
@@ -176,11 +213,11 @@ tbody td {
 
     
     table {
-        width: 85%;
+        width: 90%;
         text-align: left;
         margin-left: 0px;
+        margin-block: 10px;
 
-        border: 1px solid rgba(128, 128, 128, 0.164);
         border-collapse: collapse;
         
     }
@@ -193,17 +230,19 @@ tbody td {
         color: white;
         /* background-color: orangered; */
         border: none;
-        background: #E58632;
-        background: linear-gradient(270deg, #E58632, orangered);
     }
     table td {
-        font-size: 18px;
+        font-size: 15px;
+        font-weight: normal;
         border: none;
         color: white;
     }
     #nums-counter {
+        width: 50px;
         text-align: right;
         white-space: pre;
+
+        font-size: 28px;
     }
 
     .table-section {
@@ -212,7 +251,18 @@ tbody td {
         width: 100%;
     }
     .table-div {
-        width: 85%;
+        display: flex;
+        justify-content: center;
+        width: 70%;
+        margin-left: 10px;
+
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+
     }
 
     /* HEADER */
@@ -224,15 +274,14 @@ tbody td {
         margin-left: 0;
     }
     .theme-div {
-        width: 100%;
+        width: 70%;
         text-align: left;
-        border-bottom: 1px solid black;
+        margin-top: 15px;
     }
     .theme-div h1 {
-        font-size: 32px;
+        font-size: 27px;
         margin: 0;
-        margin-block: 15px;
-        margin-left: 12px;
+        margin-left: 10px;
     }
 
 
@@ -242,7 +291,7 @@ tbody td {
         width: 15%;
 
         right: 0;
-        bottom: 20px;
+        bottom: 170px;
         /* background-color: red; */
     }
     .circle-options-div {
@@ -266,10 +315,10 @@ tbody td {
         height: 70px;
         /* background-color: orangered; */
         border-radius: 50%;
-        border: 1px solid gold;
+        border: 1px solid white;
         
-        background: #F26400;
-        background: radial-gradient(at center, #F26400, orangered);
+        background: #7981F1;
+        background: linear-gradient(100deg,rgba(121, 129, 241, 1) 0%, rgb(111, 1, 255) 100%);
     }
     #book {
         width: 50px;
@@ -303,18 +352,21 @@ tbody td {
     /* GROUP NAME */
     .group-name {
         display: flex;
+        justify-content: left;
         align-items: center;
-        width: 150px;
-        height: 30px;
+        width: 260px;
+        height: 25px;
         margin: 0;
 
         color: white;
-        background-color: black;
     }
     .group-name p {
-        width: 110px;
-        margin-left: 15px;
-        font-size: 15px;
+        font-size: 19px;
+        font-weight: bold;
+        width: 180px;
+        margin-left: 20px;
+
+        color: rgb(147, 0, 206);
     }
     .group-name-separ {
         width: 0px;
@@ -326,6 +378,9 @@ tbody td {
     .group-name-separ p {
         color: transparent;
         background-color: transparent;
+    }
+    .theme-line {
+        width: 100%;
     }
 
 
