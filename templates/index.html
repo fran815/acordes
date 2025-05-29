@@ -15,6 +15,11 @@
         <div class="main-header">
             <div class="theme-div">
                 <h1>Grupo de alabanza</h1>
+                <div class="menu-img-section">
+                    <div class="menu-section">
+                        <div class="img-menu" id="img-menu" onclick="optionButton()"></div>
+                    </div>
+                </div>
             </div>
             <div class="group-name">
                 <hr class="theme-line">
@@ -31,13 +36,9 @@
             </div>
         </div>
 
-        <!-- <div class="separate">
-            <hr>
-        </div> -->
-
         <br>
 
-        <h4 class="program-msg">Programa</h4>
+        <h4 class="program-msg">Programa general</h4>
         <div class="table-section">
             <div>
                 <form action="/song" method="post" id="myHomeMethod">
@@ -53,14 +54,14 @@
                                 {% if x[0] == "Bienvenida" or x[0] == "Especial" or x[0] == "Predicación" or x[0] == "Acción de gracias" or x[0] == "Otro" %}
                                     <td>
                                         <div class="element-td">
-                                            <div id="nums-counter">{{ loop.index }}. </div>
+                                            <div id="nums-counter">{{ loop.index }}</div>
                                             <div style="font-weight: bold; color: white; font-size: 17px;">{{ x[0] }}</div>
                                         </div>
                                     </td>
                                 {% else %}
                                     <td>
                                         <div class="element-td">
-                                            <div id="nums-counter">{{ loop.index }}. </div>
+                                            <div id="nums-counter">{{ loop.index }}</div>
                                             <div onclick="searchClick(this)">{{ x[0] }}</div>
                                         </div>
                                     </td>
@@ -71,7 +72,7 @@
                 </table>
             </div>
 
-            <div class="circle-menu-div">
+            <div class="circle-menu-div" id="circle-menu-div">
                 <div class="circle-options-div">
                     <div class="menu-circle-option">
                         <a href="{{ url_for('search') }}">
@@ -129,6 +130,25 @@
         myInput.value = myItem;
 
         myForm.submit();
+    }
+
+
+    function optionButton() {
+        var opt = document.getElementById("circle-menu-div");
+
+        if (opt.style.display == 'block') {
+            opt.animate([
+                {transform: "scaleX(100%)", opacity: 1},
+                {transform: "scaleX(0%)", opacity: 0}
+            ], {duration: 350},
+            );
+            setTimeout(function() {
+                opt.style.display = "none";
+            }, 200);
+        } 
+        else {
+            opt.style.display = 'block';
+        }
     }
 </script>
 
