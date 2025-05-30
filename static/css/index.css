@@ -107,11 +107,12 @@ footer {
 /* HEADER */
 .main-header {
     display: flex;
-    /* flex-direction: column; */
     width: 100%;
 
-    /* background-color: rgba(0, 0, 0, 0.2); */
     color: white;
+    /* background-color: rgba(0, 0, 0, 1); */
+    background-color: transparent;
+    z-index: 100;
 }
 .main-header h1 {
     margin-left: 20px;
@@ -157,6 +158,7 @@ a {
     position: absolute;
     top: 12px;
     right: 15px;
+
 }
 
 
@@ -181,7 +183,7 @@ a {
 /* TABLE DIV */
 .table-section {
     display: flex;
-    width: 100%;
+    width: 227px;
     justify-content: center;
 }
 .table-div {
@@ -280,14 +282,15 @@ tbody td {
     .table-section {
         display: flex;
         justify-content: left;
-        width: 100%;
+        width: 295px;
     }
     .table-div {
         display: flex;
         justify-content: center;
-        width: 70%;
+        width: 100%;
         height: 500px;
-        margin-left: 10px;
+        /* margin-left: 10px; */
+        margin-inline: 10px;
 
         overflow-y: scroll;
         scrollbar-color: rgba(128, 128, 128, 0.5) transparent;
@@ -305,6 +308,8 @@ tbody td {
     .main-header {
         flex-direction: column;
         justify-content: left;
+        background-color: rgba(0, 0, 0, 1);
+        z-index: 2;
     }
     .main-header h1 {
         margin-left: 0;
@@ -329,18 +334,21 @@ tbody td {
         width: 90px;
         height: 500px;
 
-        right: 0;
-        bottom: 75px;
+        right: 0px;
+        top: 0px;
 
+        z-index: -1;
         /* background-color: red; */
     }
 
     .circle-options-div {
         display: flex;
         flex-direction: column;
+        justify-content: end;
         align-items: center;
         width: 100%;
-        height: 300px;
+        height: 100%;
+
         /* background-color: gray; */
     }
     .menu-circle-option {
@@ -358,11 +366,12 @@ tbody td {
     .menu-circle-option a {
         position: absolute;
         margin: 0;
-        transition: 0.5s ease;
-        transform: translateX(90px);
 
         /* background-color: green; */
     }
+    #ball-1 {transform: translateY(-215px);}
+    #ball-2 {transform: translateY(-315px);}
+    #ball-3 {transform: translateY(-415px);}
 
     .img-option {
         display: flex;

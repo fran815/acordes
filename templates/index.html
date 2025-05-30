@@ -107,18 +107,6 @@
             <div class="footer-title">
                 <p>בְּרֵאשִׁית בָּרָא אֱלֹהִים</p>
             </div>
-            <!-- <div class="social-div">
-                <div class="social">
-                    <a href="">
-                        <div id="social-img-1"></div>
-                    </a>
-                </div>
-                <div class="social">
-                    <a href="">
-                        <div id="social-img-2"></div>
-                    </a>
-                </div>
-            </div> -->
         </div>
     </footer>
 </body>
@@ -147,32 +135,35 @@
 
         if (check_1.checked == true) {
             // ball 1
-            ball1.style.transform = "translateX(0px)";
-            ball1.style.transition = "0.5s ease";
+            ball1.style.transform = "translateY(0px)";
+            ball1.style.transition = "0.3s ease";
+            ball1.style.zIndex = "100";
 
             // ball 2
-            ball2.style.transform = "translateX(0px)";
-            ball2.style.transition = "0.6s ease";
+            ball2.style.transform = "translateY(0px)";
+            ball2.style.transition = "0.4s ease";
+            ball2.style.zIndex = "100";
 
             // ball 3
             ball3.style.transform = "translateX(0px)";
-            ball3.style.transition = "0.7s ease";
+            ball3.style.transition = "0.5s ease";
+            ball3.style.zIndex = "100";
 
             check_2.checked = true;
             check_1.checked = false;
         }
         else {
             // ball 1
-            ball1.style.transform = "translateX(90px)";
-            ball1.style.transition = "0.7s ease";
+            ball1.style.transform = "translateY(-215px)";
+            ball1.style.transition = "0.5s ease";
 
             // ball 2
-            ball2.style.transform = "translateX(90px)";
-            ball2.style.transition = "0.6s ease";
+            ball2.style.transform = "translateY(-315px)";
+            ball2.style.transition = "0.4s ease";
 
             // ball 3
-            ball3.style.transform = "translateX(90px)";
-            ball3.style.transition = "0.5s ease";
+            ball3.style.transform = "translateY(-415px)";
+            ball3.style.transition = "0.3s ease";
 
             check_2.checked = false;
             check_1.checked = true;
