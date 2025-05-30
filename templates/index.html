@@ -17,7 +17,9 @@
                 <h1>Grupo de alabanza</h1>
                 <div class="menu-img-section">
                     <div class="menu-section">
-                        <div class="img-menu" id="img-menu" onclick="optionButton()"></div>
+                        <input type="checkbox" id="checks-1" checked hidden>
+                        <input type="checkbox" id="checks-2" hidden>
+                        <div class="img-menu" id="img-menu" onclick="myChecked()"></div>
                     </div>
                 </div>
             </div>
@@ -75,21 +77,21 @@
             <div class="circle-menu-div" id="circle-menu-div">
                 <div class="circle-options-div">
                     <div class="menu-circle-option">
-                        <a href="{{ url_for('search') }}">
+                        <a href="{{ url_for('search') }}" id="ball-1">
                             <div class="img-option">
                                 <div id="book"></div>
                             </div>
                         </a>
                     </div>
                     <div class="menu-circle-option">
-                        <a href="">
+                        <a href="" id="ball-2">
                             <div class="img-option">
                                 <div id="music"></div>
                             </div>
                         </a>
                     </div>
                     <div class="menu-circle-option">
-                        <a href="{{ url_for('selector') }}">
+                        <a href="{{ url_for('selector') }}" id="ball-3">
                             <div class="img-option">
                                 <div id="plus"></div>
                             </div>
@@ -133,21 +135,47 @@
     }
 
 
-    function optionButton() {
-        var opt = document.getElementById("circle-menu-div");
+    function myChecked() {
+        // check inputs
+        let check_1 = document.getElementById('checks-1');
+        let check_2 = document.getElementById('checks-2');
+        // balls
+        let ball1 = document.getElementById('ball-1');
+        let ball2 = document.getElementById('ball-2');
+        let ball3 = document.getElementById('ball-3');
 
-        if (opt.style.display == 'block') {
-            opt.animate([
-                {transform: "scaleX(100%)", opacity: 1},
-                {transform: "scaleX(0%)", opacity: 0}
-            ], {duration: 350},
-            );
-            setTimeout(function() {
-                opt.style.display = "none";
-            }, 200);
-        } 
+
+        if (check_1.checked == true) {
+            // ball 1
+            ball1.style.transform = "translateX(0px)";
+            ball1.style.transition = "0.5s ease";
+
+            // ball 2
+            ball2.style.transform = "translateX(0px)";
+            ball2.style.transition = "0.6s ease";
+
+            // ball 3
+            ball3.style.transform = "translateX(0px)";
+            ball3.style.transition = "0.7s ease";
+
+            check_2.checked = true;
+            check_1.checked = false;
+        }
         else {
-            opt.style.display = 'block';
+            // ball 1
+            ball1.style.transform = "translateX(90px)";
+            ball1.style.transition = "0.7s ease";
+
+            // ball 2
+            ball2.style.transform = "translateX(90px)";
+            ball2.style.transition = "0.6s ease";
+
+            // ball 3
+            ball3.style.transform = "translateX(90px)";
+            ball3.style.transition = "0.5s ease";
+
+            check_2.checked = false;
+            check_1.checked = true;
         }
     }
 </script>

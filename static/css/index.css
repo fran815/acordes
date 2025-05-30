@@ -7,6 +7,9 @@ body {
     height: 100dvh;
     font-family: sans-serif;
 
+    overflow-y: hidden;
+    overflow-x: hidden;
+
     background: rgb(22, 2, 31);
     background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgb(24, 3, 58) 50%, rgb(4, 7, 71) 100%);
     
@@ -145,12 +148,15 @@ a {
     background-size: cover;
     background-position: center;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 40px;
     height: 40px;
 
     position: absolute;
     top: 12px;
-    right: 10px;
+    right: 15px;
 }
 
 
@@ -222,6 +228,7 @@ tbody td {
 @media (max-width:650px) {
     body {
         overflow-x: hidden;
+        overflow-y: hidden;
     }
     /* MAIN DIV */
     .main-div {
@@ -316,51 +323,58 @@ tbody td {
 
     /* CIRCLE OPTIONS */
     .circle-menu-div {
-        display: none;
+        display: flex;
+        align-items: center;
         position: absolute;
         width: 90px;
+        height: 500px;
 
         right: 0;
-        bottom: 325px;
+        bottom: 75px;
 
-        animation: anim 200ms;
-        transform-origin: 100% 0%;
+        /* background-color: red; */
     }
 
     .circle-options-div {
-        width: 100%;
-        height: 150px;
-    }
-    .menu-circle-option {
-        /* display: flex;
-        justify-content: center;
-        align-items: center; */
         display: flex;
+        flex-direction: column;
         align-items: center;
         width: 100%;
+        height: 300px;
+        /* background-color: gray; */
+    }
+    .menu-circle-option {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        align-items: center;
+        width: 90px;
         height: 100px;
 
         /* background-color: yellow; */
-        margin-block: 10px;
     }
     .menu-circle-option a {
-        /* background-color: gray; */
-        margin-left: 10px;
+        position: absolute;
+        margin: 0;
+        transition: 0.5s ease;
+        transform: translateX(90px);
+
+        /* background-color: green; */
     }
+
     .img-option {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 70px;
         height: 70px;
-        /* background-color: orangered; */
         border-radius: 50%;
         border: 1px solid rgba(255, 255, 255, 0.6);
         
         background: #7981F1;
         background: linear-gradient(100deg,rgb(143, 121, 241) 0%, rgb(56, 1, 255) 100%);
-
-        animation: movimiento-izquierda 2s ease-in-out 0s;
     }
     #book {
         width: 50px;
@@ -431,17 +445,5 @@ tbody td {
 
     .options-div {
         display: none;
-    }
-}
-
-
-@keyframes anim {
-    0% {
-        transform: scaleX(0);
-        opacity: 1;
-    }
-    100% {
-        transform: scaleX(1);
-        opacity: 1;
     }
 }
