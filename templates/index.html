@@ -53,11 +53,11 @@
                     <tbody>
                         {% for x in canciones %}
                             <tr>
-                                {% if x[0] == "Bienvenida" or x[0] == "Especial" or x[0] == "Predicación" or x[0] == "Acción de gracias" or x[0] == "Otro" %}
+                                {% if x[0] == "Bienvenida" or x[0] == "Especial" or x[0] == "Predicación" or x[0] == "Acción de gracias" or x[0] == "Otro" or x[0] == "Diezmo y ofrenda" %}
                                     <td>
                                         <div class="element-td">
                                             <div id="nums-counter">{{ loop.index }}</div>
-                                            <div style="font-weight: bold; color: white; font-size: 17px;">{{ x[0] }}</div>
+                                            <div style="font-weight: bold; color: white; font-size: 17px;">{{ x[0] }} *</div>
                                         </div>
                                     </td>
                                 {% else %}
@@ -78,21 +78,21 @@
                 <div class="circle-options-div">
                     <div class="menu-circle-option">
                         <a href="{{ url_for('search') }}" id="ball-1">
-                            <div class="img-option">
+                            <div class="img-option" id="box-1">
                                 <div id="book"></div>
                             </div>
                         </a>
                     </div>
                     <div class="menu-circle-option">
                         <a href="" id="ball-2">
-                            <div class="img-option">
+                            <div class="img-option" id="box-2">
                                 <div id="music"></div>
                             </div>
                         </a>
                     </div>
                     <div class="menu-circle-option">
                         <a href="{{ url_for('selector') }}" id="ball-3">
-                            <div class="img-option">
+                            <div class="img-option" id="box-3">
                                 <div id="plus"></div>
                             </div>
                         </a>
@@ -105,7 +105,7 @@
     <footer>
         <div class="main-footer">
             <div class="footer-title">
-                <p>בְּרֵאשִׁית בָּרָא אֱלֹהִים</p>
+                <p>בראשית ברא אלהים</p>
             </div>
         </div>
     </footer>
@@ -131,6 +131,10 @@
         let ball1 = document.getElementById('ball-1');
         let ball2 = document.getElementById('ball-2');
         let ball3 = document.getElementById('ball-3');
+        // shadows
+        let bx1 = document.getElementById('box-1');
+        let bx2 = document.getElementById('box-2');
+        let bx3 = document.getElementById('box-3');
 
 
         if (check_1.checked == true) {
@@ -151,24 +155,46 @@
 
             check_2.checked = true;
             check_1.checked = false;
+
+            setTimeout(function() {
+                bx1.style.boxShadow = '0 0 10px #9ecaed';
+            }, 500);
+            setTimeout(function() {
+                bx2.style.boxShadow = '0 0 10px #9ecaed';
+            }, 600);
+            setTimeout(function() {
+                bx3.style.boxShadow = '0 0 10px #9ecaed';
+            }, 700);
         }
         else {
-            // ball 1
-            ball1.style.transform = "translateY(-215px)";
-            ball1.style.transition = "0.5s ease";
+            setTimeout(function() {
+                bx3.style.boxShadow = '0 0 0 transparent';
+            }, 300);
+            setTimeout(function() {
+                bx2.style.boxShadow = '0 0 0 transparent';
+            }, 400);
+            setTimeout(function() {
+                bx1.style.boxShadow = '0 0 0 transparent';
+            }, 500);
+            
+            setTimeout(function(){
+                // ball 1
+                ball1.style.transform = "translateY(-215px)";
+                ball1.style.transition = "0.5s ease";
 
-            // ball 2
-            ball2.style.transform = "translateY(-315px)";
-            ball2.style.transition = "0.4s ease";
+                // ball 2
+                ball2.style.transform = "translateY(-315px)";
+                ball2.style.transition = "0.4s ease";
 
-            // ball 3
-            ball3.style.transform = "translateY(-415px)";
-            ball3.style.transition = "0.3s ease";
+                // ball 3
+                ball3.style.transform = "translateY(-415px)";
+                ball3.style.transition = "0.3s ease";
 
-            check_2.checked = false;
-            check_1.checked = true;
+                check_2.checked = false;
+                check_1.checked = true;
+            },650);
         }
-    }
+    }    
 </script>
 
 </html>

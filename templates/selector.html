@@ -13,7 +13,9 @@
             <div class="img-back"></div>
         </a>
         <h1 style="margin-left: 15px;">Crear lista</h1>
-     </div>
+    </div>
+
+    <br>
 
     <div class="main-div">
         <!-- --------------------------------------------EDIT WINDOW---------------------------------------------- -->
@@ -162,37 +164,42 @@
         <div class="table-main-sections" id="table-main-sections">
             <h2>Selección de canciones</h2>
             <div class="table-div">
-                <table class="table-1" id="myTable">
-                    <th colspan="4">Programa musical</th>
-                    <tbody id="table-selector">
-                        {% for x in myData %}
-                        <tr>
-                            <td class="td-0">
-                                <!-- {{ loop.index }} -->
-                                {{ x[0] }}
-                            </td>
-                            <td class="td-1">
-                                {{ x[1] }}
-                            </td>
-                            <td class="td-2" onclick="editRow()">
-                                <!-- <p id="edit-btn">Editar</p> -->
-                                <div class="edit-img"></div>
-                            </td>
-                            <td class="td-3" onclick="deleteRow()">
-                                <!-- <p id="oneDelet-btn">Eliminar</p> -->
-                                <div class="trash-img"></div>
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-                <form action="">
-                    <input type="text" id="edit-item" placeholder="edit" hidden>
-                </form>
-                <form action="/delete" method="post" id="del-form">
-                    <input type="text" id="delet-item" name="song-deleted" hidden>
-                </form>
+                <div class="light-div">
+                    <table class="table-1" id="myTable">
+                        <th colspan="4">Programa musical</th>
+                        <tbody id="table-selector">
+                            {% for x in myData %}
+                            <tr>
+                                <td class="td-0">
+                                    <!-- {{ loop.index }} -->
+                                    {{ x[0] }}
+                                </td>
+                                <td class="td-1">
+                                    {{ x[1] }}
+                                </td>
+                                <td class="td-2" onclick="editRow()">
+                                    <!-- <p id="edit-btn">Editar</p> -->
+                                    <div class="edit-img"></div>
+                                </td>
+                                <td class="td-3" onclick="deleteRow()">
+                                    <!-- <p id="oneDelet-btn">Eliminar</p> -->
+                                    <div class="trash-img"></div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    <form action="">
+                        <input type="text" id="edit-item" placeholder="edit" hidden>
+                    </form>
+                    <form action="/delete" method="post" id="del-form">
+                        <input type="text" id="delet-item" name="song-deleted" hidden>
+                    </form>
+                </div>
             </div>
+
+            <br>
+
             <div class="btn-section">
                 <div>
                     <button class="changeBtn" id="save-btn" onclick="saveList()">Guardar cambios</button>
@@ -234,10 +241,20 @@
 
             <br>
 
+            <div class="name-data">
+                <div class="col-data">
+                    <div class="col-name-1">
+                        <p>Número</p>
+                    </div>
+                    <div class="col-name-2">
+                        <p>Nombre</p>
+                    </div>
+                </div>
+            </div>
             <div class="list-section">
                 <table class="table-2">
-                    <th>Número</th>
-                    <th>Nombre</th>
+                    <!-- <th>Número</th>
+                    <th>Nombre</th> -->
                     <tbody id="mytableBody">
                         <tr>
                             <td class="ltd-1"></td>

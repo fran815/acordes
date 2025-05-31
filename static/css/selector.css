@@ -2,8 +2,8 @@ body {
     margin: 0px;
     font-family: sans-serif;
 
-    background: #171717;
-    background: linear-gradient(365deg,rgba(23, 23, 23, 1) 0%, rgba(51, 51, 51, 1) 100%);
+    background: rgb(22, 2, 31);
+    background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgb(24, 3, 58) 50%, rgb(4, 7, 71) 100%);
 }
 /* HEADER */
 .main-header {
@@ -39,6 +39,22 @@ h2 {
 }
 
 
+/* NAME DATA */
+.name-data {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+}
+.col-data{
+    display: flex;
+    width: 95%;
+}
+.col-name-1 {width: 28%; text-align: center; font-weight: bold;}
+.col-name-2 {width: 72%; text-align: center; font-weight: bold;}
+
+
 /* LIST SECTION */
 .list-main-section {
     flex-direction: column;
@@ -56,9 +72,7 @@ h2 {
     height: 550px;
     overflow-y: scroll;
 }
-.table-2 tbody tr:nth-child(even) {
-    background: radial-gradient(circle at 18.7% 37.8%, rgb(56, 56, 56) 0%, rgb(20, 20, 20) 90%);
-}
+
 /* LIST */
 .table-2 {
     width: 100%;
@@ -132,9 +146,9 @@ h2 {
 }
 .radio-input:checked + .radio-label {
     color: white;
-    background: #E58632;
-    background: linear-gradient(270deg, #E58632, orangered);
-    border: 1px solid gold;
+    background: #5e79ff;
+    background: radial-gradient(circle,rgba(94, 121, 255, 1) 34%, rgba(140, 70, 252, 1) 100%);
+    border: 1px solid white;
 }
 
 /* radio 2 (edit-window)*/
@@ -157,9 +171,42 @@ h2 {
 }
 .radio-input2:checked + .radio-label2 {
     color: white;
-    background: #E58632;
-    background: linear-gradient(270deg, #E58632, orangered);
-    border: 1px solid gold;
+    background: #5e79ff;
+    background: radial-gradient(circle,rgba(94, 121, 255, 1) 34%, rgba(140, 70, 252, 1) 100%);
+    border: 1px solid white;
+}
+
+
+/* LIGHT DIV */
+.light-div {
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    background-color: transparent;
+    overflow: hidden;
+}
+.light-div::before {
+    content: "";
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 700px;
+    height: 700px;
+    /* rgba(121, 0, 201, 1)   rgba(0, 212, 255, 1) */
+    background-image: conic-gradient(transparent, transparent ,rgba(0, 212, 255, 1),
+        transparent, transparent, rgb(138, 15, 219), transparent);
+    animation: rotar 2s linear infinite;
+}
+
+@keyframes rotar {
+    from{
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
 }
 
 
@@ -179,21 +226,16 @@ h2 {
     margin-bottom: 5px;
 }
 .table-1 {
-    width: 90%;
+    width: 99%;
     text-align: left;
     border-spacing: 0;
     color: white;
 
-    margin-block: 10px;
+    margin-block: 3px;
     border-radius: 5px;
-    border: 1px solid rgba(128, 128, 128, 0.233);
-
-    /* background: rgba(207, 207, 207, 0.37);
-    border-radius: 5px;
-    box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
-    border: 1px solid rgba(0, 0, 0, 0.3); */
+    background-color: black;
+    border: 1px dotted rgb(128, 128, 128);
+    z-index: 1;
 }
 .table-1 th {
     display: flex;
@@ -202,8 +244,6 @@ h2 {
     width: 100%;
 
     color: white;
-    background: #E58632;
-    background: linear-gradient(270deg, #E58632, orangered);
 }
 .table-1 tr {
     display: flex;
@@ -248,8 +288,8 @@ h2 {
     background-position: center;
 
     border-radius: 5px;
-    background-color: green;
-    border: 1px solid black;
+    background-color: rgb(22, 110, 241);
+    border: 1px solid white;
 
     cursor: pointer;
 }
@@ -261,8 +301,8 @@ h2 {
     background-position: center;
 
     border-radius: 5px;
-    background-color: red;
-    border: 1px solid black;
+    background-color: rgb(141, 1, 223);
+    border: 1px solid white;
 
     cursor: pointer;
 }
@@ -286,18 +326,20 @@ h2 {
     border-radius: 5px;
 }
 #save-btn {
-    background-color: green;
+    background-color: rgb(22, 110, 241);
     color: white;
     font-weight: bold;
 
     cursor: pointer;
+    border: 1px solid rgb(123, 251, 255);
 }
 #delet-btn {
-    background-color: red;
+    background-color: rgb(141, 1, 223);
     color: white;
     font-weight: bold;
 
     cursor: pointer;
+    border: 1px solid rgb(123, 251, 255);
 }
 
 
@@ -323,6 +365,8 @@ h2 {
     display: flex;
     justify-content: right;
     width: 95%;
+
+
 
 }
 #close-img {
@@ -364,8 +408,8 @@ h2 {
     flex-direction: column;
     width: 100%;
 
-    background: #171717;
-    background: linear-gradient(365deg,rgba(23, 23, 23, 1) 0%, rgba(51, 51, 51, 1) 100%);
+    background: rgb(22, 2, 31);
+    background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgb(24, 3, 58) 50%, rgb(4, 7, 71) 100%);
 }
 h4 {
     color: white;
@@ -397,7 +441,7 @@ h4 {
     border-radius: 5px;
 
     color: white;
-    background-color: black;
+    background-color: rgb(69, 1, 255);
 }
 
 
@@ -440,10 +484,13 @@ h4 {
         display: flex;
         justify-content: center;
         width: 100%;
+
+        /* background-color: red; */
     }
     .table-1 {
         width: 98%;
         text-align: center;
+        /* background-color: black; */
     }
     .btn-section {
         display: flex;

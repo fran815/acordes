@@ -53,21 +53,39 @@ h1 {
     text-align: center;
 }
 .list-section {
+    display: flex;
+    justify-content: center;
     width: 100%;
     height: 550px;
     overflow-y: scroll;
+    /* background-color: red; */
 }
+
+
+/* NAME DATA */
+.name-data {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+}
+.col-data{
+    display: flex;
+    width: 95%;
+}
+.col-name-1 {width: 28%; text-align: center; font-weight: bold;}
+.col-name-2 {width: 72%; text-align: center; font-weight: bold;}
+
 
 /* LIST */
 .table-2 {
-    width: 100%;
+    width: 95%;
     color: white;
     border-collapse: collapse;
     border-radius: 5px;
 }
-.table-2 th{
-    border: 1px dotted rgba(255, 255, 255, 0.5);
-}
+
 .table-2 tr {
     height: 40px;
 }

@@ -27,7 +27,7 @@ def index():
         return f"<h1>{e}</h1>"
     
     finally:
-        if mysql:
+        if mysql.open:
             mysql.close()
 
     return render_template('index.html', canciones=main_list)
