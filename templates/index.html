@@ -8,13 +8,14 @@
 </head>
 <body>
 
+
     <div class="first-ball"></div>
     <div class="second-ball"></div>
 
     <div class="main-div">
         <div class="main-header">
             <div class="theme-div">
-                <h1>Grupo de alabanza</h1>
+                <h1>Grupo de alabanza </h1>
                 <div class="menu-img-section">
                     <div class="menu-section">
                         <input type="checkbox" id="checks-1" checked hidden>
@@ -39,6 +40,35 @@
         </div>
 
         <br>
+
+        <div class="tablet-main-menu">
+            <div class="tablet-menu-space">
+                <div class="tablet-card-1">
+                    <div class="img-tablet-1"></div>
+                    <a href="{{ url_for('search') }}">
+                        <div class="tablet-hyper-vin">
+                            <p>Himnario</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="tablet-card-2">
+                    <div class="img-tablet-2"></div>
+                    <a href="">
+                        <div class="tablet-hyper-vin">
+                            <p>Acordes</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="tablet-card-3">
+                    <div class="img-tablet-3"></div>
+                    <a href="{{ url_for('selector') }}">
+                        <div class="tablet-hyper-vin">
+                            <p>Editar</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
 
         <h4 class="program-msg">Programa general</h4>
         <div class="table-section">
