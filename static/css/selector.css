@@ -155,8 +155,6 @@ h2 {
 .radio-input:checked + .radio-label {
     color: white;
     background-color: black;
-    /* background: #5e79ff;
-    background: radial-gradient(circle,rgba(94, 121, 255, 1) 34%, rgba(140, 70, 252, 1) 100%); */
     border: 1px solid black;
 }
 
@@ -181,8 +179,6 @@ h2 {
 .radio-input2:checked + .radio-label2 {
     color: white;
     background-color: black;
-    /* background: #5e79ff;
-    background: radial-gradient(circle,rgba(94, 121, 255, 1) 34%, rgba(140, 70, 252, 1) 100%); */
     border: 1px solid black;
 }
 
@@ -197,14 +193,13 @@ h2 {
     background-color: transparent;
     overflow: hidden;
 }
-.light-div::before {
+/* .light-div::before {
     content: "";
     position: absolute;
     display: flex;
     justify-content: center;
     width: 900px;
     height: 900px;
-    /* rgba(121, 0, 201, 1)   rgba(0, 212, 255, 1) */
     background-image: conic-gradient(transparent, transparent ,orange,
         transparent, transparent, orangered, transparent);
     animation: rotar 2s linear infinite;
@@ -217,7 +212,7 @@ h2 {
     to {
         transform: rotate(-360deg);
     }
-}
+} */
 
 
 /* TABLE 1 */
@@ -243,8 +238,13 @@ h2 {
 
     margin-block: 3px;
     border-radius: 5px;
-    background-color: white;
-    border: 1px dotted rgb(128, 128, 128);
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
     z-index: 1;
 }
 .table-1 th {

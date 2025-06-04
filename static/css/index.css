@@ -10,15 +10,14 @@ body {
     overflow-y: hidden;
     overflow-x: hidden;
 
-    background-color: white;
-    /* background-color: #f6f6f6;
-    background-image: linear-gradient(315deg, #f6f6f6 0%, #e9e9e9 74%); */
-    /* background: rgb(22, 2, 31);
-    background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgb(24, 3, 58) 50%, rgb(4, 7, 71) 100%); */
+    /* background-color: white; */
+    background-image: url(/static/css/imgs/mountain.jpg);
+    background-size: cover;
+    background-position: center;
     
 }
 
-.first-ball {
+/* .first-ball {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -30,8 +29,6 @@ body {
     z-index: -1;
 
     border-radius: 50%;
-    /* background: #4075DA;
-    background: linear-gradient(112deg,rgb(45, 85, 158) 0%, rgb(68, 18, 114) 100%); */
     background-color: rgb(175, 175, 175);
 }
 .first-ball::before {
@@ -43,7 +40,6 @@ body {
     height: 370px;
     border-radius: 50%;
 
-    /* background-image: conic-gradient(rgb(0, 162, 255) 20deg, transparent 120deg); */
     background-image: conic-gradient(red 20deg, gold 120deg);
     animation: rotar 2s linear infinite;
 }
@@ -59,8 +55,6 @@ body {
     margin-top: 2px;
 
     color: white;
-    /* background: #4075DA;
-    background: linear-gradient(112deg,rgb(20, 50, 105) 0%, rgb(32, 7, 56) 100%); */
     background: linear-gradient(112deg,rgb(255, 189, 67) 0%, rgb(228, 91, 0) 100%);
 }
 
@@ -86,8 +80,6 @@ body {
     z-index: -1;
 
     border-radius: 50%;
-    /* background: #4075DA;
-    background: linear-gradient(112deg,rgb(49, 88, 160) 0%, rgb(110, 32, 173) 100%); */
     background-color: rgb(175, 175, 175);
 }   
 .second-ball::before {
@@ -95,7 +87,6 @@ body {
     position: absolute;
     width: 220px;
     height: 220px;
-    /* background-image: conic-gradient(transparent 220deg, rgb(106, 196, 248) 250deg); */
     background-image: conic-gradient(gold 220deg, red 250deg);
     animation: rotar2 2s linear infinite;
 }
@@ -107,8 +98,6 @@ body {
     margin-top: 1px;
 
     border-radius: 50%;
-    /* background-color: black; */
-    /* background: #4075DA; */
     background: linear-gradient(112deg,rgb(228, 91, 0) 0%, rgb(255, 189, 67) 100%);
 }
 
@@ -119,7 +108,7 @@ body {
     to {
         transform: rotate(360deg);
     }
-}
+} */
 
 
 /* FOOTER */
@@ -131,7 +120,7 @@ footer {
     width: 100%;
     height: 90px;
     color: white;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.781);
 }
 .main-footer {
     display: flex;
@@ -201,7 +190,7 @@ footer {
 .theme-div {
     display: flex;
     width: 100%;
-    color: black;
+    color: white;
     /* text-align: center; */
 }
 
@@ -227,7 +216,7 @@ footer {
     margin-left: 30px;
     margin-block: 10px;
 
-    color: black;
+    color: white;
 }
 
 /* TABLET DIV MENU */
@@ -310,7 +299,7 @@ footer {
 /* card-images */
 .img-tablet-1 {
     position: absolute;
-    background-image: url(/static/css/imgs/orangebook.png);
+    background-image: url(/static/css/imgs/libronegro.png);
     background-size: cover;
     width: 90px;
     height: 90px;
@@ -321,7 +310,7 @@ footer {
 }
 .img-tablet-2 {
     position: absolute;
-    background-image: url(/static/css/imgs/orangemusic.png);
+    background-image: url(/static/css/imgs/musicanegro.png);
     background-size: cover;
     width: 90px;
     height: 90px;
@@ -332,7 +321,7 @@ footer {
 }
 .img-tablet-3 {
     position: absolute;
-    background-image: url(/static/css/imgs/orangepencil.png);
+    background-image: url(/static/css/imgs/lapiznegro.png);
     background-size: cover;
     width: 90px;
     height: 90px;
@@ -353,7 +342,7 @@ footer {
     height: 100%;
 }
 .tablet-hyper-vin p {
-    color: black;
+    color: white;
     font-size: 27px;
 }
 
@@ -389,7 +378,7 @@ footer {
     margin-left: 20px;
 
     /* color: rgb(177, 4, 4); */
-    color: rgb(196, 52, 0);
+    color: rgb(101, 186, 255);
 }
 .group-name-separ {
     width: 0px;
@@ -462,7 +451,7 @@ tbody td {
     font-size: 15px;
     font-weight: normal;
     border: none;
-    color: black;
+    color: white;
 }
 
 .element-td {
@@ -471,10 +460,8 @@ tbody td {
     height: 50px;
     
     background-color: rgba(175, 175, 175, 0.15);
-    border: 1px solid rgba(146, 146, 146, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.5);
 
-    /* background-color: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.25); */
     border-radius: 10px;
 }
 #nums-counter {
@@ -518,7 +505,7 @@ tbody td {
         
     }
 
-    .first-ball {
+    /* .first-ball {
         position: absolute;
         display: flex;
         justify-content: center;
@@ -530,8 +517,6 @@ tbody td {
         z-index: -1;
 
         border-radius: 50%;
-        /* background: #4075DA;
-        background: linear-gradient(112deg,rgb(45, 85, 158) 0%, rgb(68, 18, 114) 100%); */
         background-color: rgb(175, 175, 175);
     }
     .first-ball::before {
@@ -543,7 +528,6 @@ tbody td {
         height: 370px;
         border-radius: 50%;
 
-        /* background-image: conic-gradient(rgb(0, 162, 255) 20deg, transparent 120deg); */
         background-image: conic-gradient(red 20deg, gold 120deg);
         animation: rotar 2s linear infinite;
     }
@@ -560,7 +544,6 @@ tbody td {
 
         color: white;
         background: #4075DA;
-        /* background: linear-gradient(112deg,rgb(20, 50, 105) 0%, rgb(32, 7, 56) 100%); */
         background: linear-gradient(112deg,rgb(255, 189, 67) 0%, rgb(228, 91, 0) 100%);
     }
 
@@ -586,8 +569,6 @@ tbody td {
         z-index: -1;
 
         border-radius: 50%;
-        /* background: #4075DA;
-        background: linear-gradient(112deg,rgb(49, 88, 160) 0%, rgb(110, 32, 173) 100%); */
         background-color: rgb(175, 175, 175);
     }   
     .second-ball::before {
@@ -595,7 +576,6 @@ tbody td {
         position: absolute;
         width: 220px;
         height: 220px;
-        /* background-image: conic-gradient(transparent 220deg, rgb(106, 196, 248) 250deg); */
         background-image: conic-gradient(gold 220deg, red 250deg);
         animation: rotar2 2s linear infinite;
     }
@@ -607,7 +587,6 @@ tbody td {
         margin-top: 1px;
 
         border-radius: 50%;
-        /* background-color: black; */
         background: linear-gradient(112deg,rgb(228, 91, 0) 0%, rgb(255, 189, 67) 100%);
     }
 
@@ -618,7 +597,7 @@ tbody td {
         to {
             transform: rotate(360deg);
         }
-    }
+    } */
 
     /* TABLET DIV MENU */
     .tablet-main-menu {
@@ -700,7 +679,7 @@ tbody td {
     /* card-images */
     .img-tablet-1 {
         position: absolute;
-        background-image: url(/static/css/imgs/orangebook.png);
+        background-image: url(/static/css/imgs/libronegro.png);
         background-size: cover;
         width: 90px;
         height: 90px;
@@ -711,18 +690,18 @@ tbody td {
     }
     .img-tablet-2 {
         position: absolute;
-        background-image: url(/static/css/imgs/orangemusic.png);
+        background-image: url(/static/css/imgs/musicanegro.png);
         background-size: cover;
         width: 90px;
         height: 90px;
         z-index: -1;
 
         animation: anim 3s infinite;
-        filter: blur(3.5px);
+        filter: blur(4px);
     }
     .img-tablet-3 {
         position: absolute;
-        background-image: url(/static/css/imgs/orangepencil.png);
+        background-image: url(/static/css/imgs/lapiznegro.png);
         background-size: cover;
         width: 90px;
         height: 90px;
@@ -743,7 +722,7 @@ tbody td {
         height: 100%;
     }
     .tablet-hyper-vin p {
-        color: black;
+        color: white;
         font-size: 27px;
     }
 
@@ -809,7 +788,7 @@ tbody td {
         width: 180px;
         margin-left: 20px;
 
-        color: rgb(196, 52, 0);
+        color: rgb(101, 186, 255);
     }
     .group-name-separ {
         width: 0px;
@@ -854,7 +833,7 @@ tbody td {
     /* TABLE DIV */
     .program-msg {
         font-size: 19px;
-        margin-left: 25px;
+        margin-left: 35px;
         margin-block: 10px;
 
         color: white;
@@ -890,7 +869,7 @@ tbody td {
         font-size: 15px;
         font-weight: normal;
         border: none;
-        color: black;
+        color: white;
     }
 
     .element-td {
@@ -899,7 +878,7 @@ tbody td {
         height: 50px;
         
         background-color: rgba(175, 175, 175, 0.15);
-        border: 1px solid rgba(146, 146, 146, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.5);
         /* background-color: rgba(255, 255, 255, 0.15);
         border: 1px solid rgba(255, 255, 255, 0.25); */
         border-radius: 10px;
@@ -988,7 +967,7 @@ tbody td {
     
     /* OK TO DISPLAY */
     .img-menu {
-        background-image: url(/static/css/imgs/blackmenu.png);
+        background-image: url(/static/css/imgs/menu-abierto.png);
         background-size: cover;
         background-position: center;
 
@@ -1027,11 +1006,12 @@ tbody td {
     /* FOOTER DISPLAY */
     footer {
         display: block;
+        height: 70px;
     }
 
 
     /* CIRCLES WALLPAPER */
-    .first-ball {
+    /* .first-ball {
         position: absolute;
         display: flex;
         justify-content: center;
@@ -1040,11 +1020,8 @@ tbody td {
         width: 170px;
         height: 170px;
         overflow: hidden;
-        /* z-index: -0; */
 
         border-radius: 50%;
-        /* background: #4075DA;
-        background: linear-gradient(112deg,rgb(45, 85, 158) 0%, rgb(68, 18, 114) 100%); */
         background-color: rgb(175, 175, 175);
     }
     .first-ball::before {
@@ -1056,7 +1033,6 @@ tbody td {
         height: 170px;
         border-radius: 50%;
 
-        /* background-image: conic-gradient(rgb(0, 162, 255) 20deg, transparent 120deg); */
         background-image: conic-gradient(red 20deg, gold 120deg);
         animation: rotar 2s linear infinite;
     }
@@ -1072,8 +1048,6 @@ tbody td {
         margin-top: 2px;
 
         color: white;
-        /* background: #4075DA;
-        background: linear-gradient(112deg,rgb(20, 50, 105) 0%, rgb(32, 7, 56) 100%); */
         background: linear-gradient(112deg,rgb(255, 189, 67) 0%, rgb(228, 91, 0) 100%);
     }
 
@@ -1099,8 +1073,6 @@ tbody td {
         overflow: hidden;
 
         border-radius: 50%;
-        /* background: #4075DA;
-        background: linear-gradient(112deg,rgb(49, 88, 160) 0%, rgb(110, 32, 173) 100%); */
         background-color: rgb(175, 175, 175);
     }
     .second-ball::before {
@@ -1108,7 +1080,6 @@ tbody td {
         position: absolute;
         width: 120px;
         height: 120px;
-        /* background-image: conic-gradient(transparent 220deg, rgb(106, 196, 248) 250deg); */
         background-image: conic-gradient(gold 220deg, red 250deg);
         animation: rotar2 2s linear infinite;
     }
@@ -1130,7 +1101,7 @@ tbody td {
         to {
             transform: rotate(360deg);
         }
-    }
+    } */
 
 
     /* TABLE SONGS */
@@ -1156,7 +1127,7 @@ tbody td {
         font-size: 15px;
         font-weight: normal;
         border: none;
-        color: black;
+        color: white;
     }
     #nums-counter {
         width: 50px;
@@ -1196,7 +1167,7 @@ tbody td {
     .main-header {
         flex-direction: column;
         justify-content: left;
-        background-color: white;
+        background-color: rgb(69, 116, 128);
         z-index: 2;
     }
     .main-header h1 {
@@ -1272,7 +1243,7 @@ tbody td {
         border: 1px solid rgba(173, 173, 173, 0.5);
         /* box-shadow: 0 0 10px #9ecaed; */
         
-        background-color: rgb(223, 108, 0);
+        background-color: rgb(61, 116, 129);
         /* background: #7981F1;
         background: linear-gradient(100deg,rgb(113, 81, 255) 0%, rgb(49, 6, 207) 100%); */
     }
@@ -1327,7 +1298,7 @@ tbody td {
         width: 180px;
         margin-left: 20px;
 
-        color: rgb(196, 52, 0);
+        color: rgb(101, 186, 255);
     }
     .group-name-separ {
         width: 0px;
