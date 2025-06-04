@@ -3,7 +3,7 @@ body {
     font-family: sans-serif;
     height: 100dvh;
 
-    background: rgb(18, 2, 53);
+    background: white;
     /* background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgb(24, 3, 58) 50%, rgb(4, 7, 71) 100%); */
 }
 
@@ -11,7 +11,7 @@ body {
     display: flex;
     align-items: center;
     width: 100%;
-    color: white;
+    color: black;
     /* background-color: black; */
 }
 .button-area {
@@ -19,13 +19,13 @@ body {
     height: 30px;
 }
 .img-div {
-    background-image: url(/static/css/imgs/back.png);
+    background-image: url(/static/css/imgs/blackback.png);
     background-size: cover;
     width: 30px;
     height: 30px;
 }
 h1 {
-    color: white;
+    color: black;
     margin-left: 15px;
 }
 
@@ -69,7 +69,8 @@ h1 {
     justify-content: center;
     width: 100%;
     color: white;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    background-color: black;
+    border-bottom: 1px solid gray;
 }
 .col-data{
     display: flex;
@@ -82,13 +83,16 @@ h1 {
 /* LIST */
 .table-2 {
     width: 95%;
-    color: white;
+    color: black;
     border-collapse: collapse;
     border-radius: 5px;
 }
 
 .table-2 tr {
     height: 40px;
+}
+.table-2 tr:nth-child(even) {
+    background-color: rgba(209, 209, 209, 0.357);
 }
 .ltd-1 {
     width: 20%;
@@ -141,8 +145,8 @@ h1 {
     padding: 8px 14px;
     font-size: 12px;
     font-family: sans-serif;
-    color: white;
-    background: rgba(255, 255, 255, 0.349);
+    color: black;
+    background: rgba(201, 201, 201, 0.349);
     cursor: pointer;
     transition: background 0.1s;
 }
@@ -151,9 +155,11 @@ h1 {
 }
 .radio-input:checked + .radio-label {
     color: white;
-    background: #5e79ff;
-    background: radial-gradient(circle,rgba(94, 121, 255, 1) 34%, rgba(140, 70, 252, 1) 100%);
-    border: 1px solid white;
+    background-color: black;
+    /* background: #5e79ff;
+    background: radial-gradient(circle,rgba(94, 121, 255, 1) 34%, rgba(140, 70, 252, 1) 100%); */
+    border: 1px solid black;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 }
 
 /* radio 2 (edit-window)*/

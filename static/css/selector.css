@@ -3,7 +3,7 @@ body {
     font-family: sans-serif;
     height: 100dvh;
 
-    background: rgb(18, 2, 53);
+    background: white;
     /* background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgb(24, 3, 58) 50%, rgb(4, 7, 71) 100%); */
 }
 /* HEADER */
@@ -14,7 +14,7 @@ body {
     color: white;
 }
 .img-back {
-    background-image: url(/static/css/imgs/back.png);
+    background-image: url(/static/css/imgs/blackback.png);
     background-size: cover;
     background-position: center;
     width: 30px;
@@ -26,6 +26,9 @@ body {
 .main-title {
     margin-left: 15px;
     margin-bottom: 20px;
+}
+h1 {
+    color: black;
 }
 
 
@@ -46,7 +49,8 @@ h2 {
     justify-content: center;
     width: 100%;
     color: white;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    background-color: black;
+    border-bottom: 1px solid gray;
 }
 .col-data{
     display: flex;
@@ -77,7 +81,7 @@ h2 {
 /* LIST */
 .table-2 {
     width: 100%;
-    color: white;
+    color: black;
 }
 .table-2 th{
     background-color: black;
@@ -85,6 +89,9 @@ h2 {
 }
 .table-2 tr {
     height: 40px;
+}
+.table-2 tr:nth-child(even) {
+    background-color: rgba(209, 209, 209, 0.357);
 }
 .ltd-1 {
     width: 20%;
@@ -137,8 +144,8 @@ h2 {
     padding: 8px 14px;
     font-size: 12px;
     font-family: sans-serif;
-    color: white;
-    background: rgba(255, 255, 255, 0.349);
+    color: black;
+    background: rgba(201, 201, 201, 0.349);
     cursor: pointer;
     transition: background 0.1s;
 }
@@ -147,9 +154,10 @@ h2 {
 }
 .radio-input:checked + .radio-label {
     color: white;
-    background: #5e79ff;
-    background: radial-gradient(circle,rgba(94, 121, 255, 1) 34%, rgba(140, 70, 252, 1) 100%);
-    border: 1px solid white;
+    background-color: black;
+    /* background: #5e79ff;
+    background: radial-gradient(circle,rgba(94, 121, 255, 1) 34%, rgba(140, 70, 252, 1) 100%); */
+    border: 1px solid black;
 }
 
 /* radio 2 (edit-window)*/
@@ -162,8 +170,8 @@ h2 {
     padding: 8px 14px;
     font-size: 12px;
     font-family: sans-serif;
-    color: white;
-    background: rgba(255, 255, 255, 0.349);
+    color: black;
+    background: rgba(201, 201, 201, 0.349);
     cursor: pointer;
     transition: background 0.1s;
 }
@@ -172,9 +180,10 @@ h2 {
 }
 .radio-input2:checked + .radio-label2 {
     color: white;
-    background: #5e79ff;
-    background: radial-gradient(circle,rgba(94, 121, 255, 1) 34%, rgba(140, 70, 252, 1) 100%);
-    border: 1px solid white;
+    background-color: black;
+    /* background: #5e79ff;
+    background: radial-gradient(circle,rgba(94, 121, 255, 1) 34%, rgba(140, 70, 252, 1) 100%); */
+    border: 1px solid black;
 }
 
 
@@ -196,8 +205,8 @@ h2 {
     width: 900px;
     height: 900px;
     /* rgba(121, 0, 201, 1)   rgba(0, 212, 255, 1) */
-    background-image: conic-gradient(transparent, transparent ,rgba(0, 212, 255, 1),
-        transparent, transparent, rgb(138, 15, 219), transparent);
+    background-image: conic-gradient(transparent, transparent ,orange,
+        transparent, transparent, orangered, transparent);
     animation: rotar 2s linear infinite;
 }
 
@@ -230,11 +239,11 @@ h2 {
     width: 99%;
     text-align: left;
     border-spacing: 0;
-    color: white;
+    color: black;
 
     margin-block: 3px;
     border-radius: 5px;
-    background-color: black;
+    background-color: white;
     border: 1px dotted rgb(128, 128, 128);
     z-index: 1;
 }
@@ -244,7 +253,7 @@ h2 {
     align-items: center;
     width: 100%;
 
-    color: white;
+    color: black;
 }
 .table-1 tr {
     display: flex;
@@ -289,7 +298,7 @@ h2 {
     background-position: center;
 
     border-radius: 5px;
-    background-color: rgb(22, 110, 241);
+    background-color: rgb(0, 161, 0);
     border: 1px solid white;
 
     cursor: pointer;
@@ -302,7 +311,7 @@ h2 {
     background-position: center;
 
     border-radius: 5px;
-    background-color: rgb(141, 1, 223);
+    background-color: red;
     border: 1px solid white;
 
     cursor: pointer;
@@ -327,20 +336,20 @@ h2 {
     border-radius: 5px;
 }
 #save-btn {
-    background-color: rgb(22, 110, 241);
+    background-color: black;
     color: white;
     font-weight: bold;
 
     cursor: pointer;
-    border: 1px solid rgb(123, 251, 255);
+    border: 1px solid black;
 }
 #delet-btn {
-    background-color: rgb(141, 1, 223);
+    background-color: red;
     color: white;
     font-weight: bold;
 
     cursor: pointer;
-    border: 1px solid rgb(123, 251, 255);
+    border: 1px solid black;
 }
 
 
@@ -410,11 +419,11 @@ h2 {
     width: 100%;
     height: 100%;
 
-    background: rgb(18, 2, 53);
+    background: white;
     /* background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgb(24, 3, 58) 50%, rgb(4, 7, 71) 100%); */
 }
 h4 {
-    color: white;
+    color: black;
 }
 .edit-window {
     display: flex;
@@ -443,7 +452,7 @@ h4 {
     border-radius: 5px;
 
     color: white;
-    background-color: rgb(69, 1, 255);
+    background-color: black;
 }
 
 
@@ -493,7 +502,6 @@ h4 {
         background: transparent;
         background: transparent;
 
-        background: rgb(18, 2, 53);
         margin: 0;
     }
 
