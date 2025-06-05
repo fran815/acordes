@@ -6,7 +6,7 @@ body {
     background-image: url(/static/css/imgs/mountain.jpg);
     background-size: cover;
     background-position: center;
-    backdrop-filter: blur(2.5px);
+    backdrop-filter: blur(2px);
 }
 /* HEADER */
 .main-header {
@@ -510,9 +510,7 @@ h4 {
 /* MOBILE VERSION */
 @media (max-width:650px) {
     body {
-        background: transparent;
-        background: transparent;
-
+        height: 100%;
         margin: 0;
 
         /* background-color: rgb(69, 116, 128); */
@@ -541,12 +539,12 @@ h4 {
         margin-left: 0;
     }
     .list-section {
-        height: 270px;
+        height: 430px;
     }
 
 
     .light-div {
-        height: 200px;
+        height: 350px;
     }
 
 
