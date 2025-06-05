@@ -3,8 +3,10 @@ body {
     font-family: sans-serif;
     height: 100dvh;
 
-    background: white;
-    /* background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgb(24, 3, 58) 50%, rgb(4, 7, 71) 100%); */
+    background-image: url(/static/css/imgs/mountain.jpg);
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(2.5px);
 }
 /* HEADER */
 .main-header {
@@ -28,7 +30,7 @@ body {
     margin-bottom: 20px;
 }
 h1 {
-    color: black;
+    color: white;
 }
 
 
@@ -76,12 +78,13 @@ h2 {
     width: 100%;
     height: 550px;
     overflow-y: scroll;
+    scrollbar-color: rgba(128, 128, 128, 0.192) transparent;
 }
 
 /* LIST */
 .table-2 {
     width: 100%;
-    color: black;
+    color: white;
 }
 .table-2 th{
     background-color: black;
@@ -185,13 +188,22 @@ h2 {
 
 /* LIGHT DIV */
 .light-div {
-    position:relative;
     display: flex;
     justify-content: center;
-    align-items: center;
     width: 90%;
-    background-color: transparent;
-    overflow: hidden;
+    height: 410px;
+    overflow-y: scroll;
+    scrollbar-color: rgba(128, 128, 128, 0.192) transparent;
+
+    margin-block: 3px;
+    
+    border-radius: 5px;
+    background: rgba(177, 177, 177, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 /* .light-div::before {
     content: "";
@@ -231,19 +243,19 @@ h2 {
     margin-bottom: 5px;
 }
 .table-1 {
-    width: 99%;
+    width: 100%;
     text-align: left;
     border-spacing: 0;
-    color: black;
+    color: white;
 
-    margin-block: 3px;
+    /* margin-block: 3px;
     border-radius: 5px;
     background: rgba( 255, 255, 255, 0.25 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: 1px solid rgba( 255, 255, 255, 0.18 ); */
 
     z-index: 1;
 }
@@ -253,7 +265,7 @@ h2 {
     align-items: center;
     width: 100%;
 
-    color: black;
+    color: white;
 }
 .table-1 tr {
     display: flex;
@@ -419,8 +431,7 @@ h2 {
     width: 100%;
     height: 100%;
 
-    background: white;
-    /* background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgb(24, 3, 58) 50%, rgb(4, 7, 71) 100%); */
+    background: rgb(69, 116, 128);
 }
 h4 {
     color: black;
@@ -503,6 +514,12 @@ h4 {
         background: transparent;
 
         margin: 0;
+
+        /* background-color: rgb(69, 116, 128); */
+        background-image: url(/static/css/imgs/mountain.jpg);
+        background-size: cover;
+        background-position: center;
+        backdrop-filter: blur(2.5px);
     }
 
 
@@ -524,7 +541,12 @@ h4 {
         margin-left: 0;
     }
     .list-section {
-        height: 470px;
+        height: 270px;
+    }
+
+
+    .light-div {
+        height: 200px;
     }
 
 

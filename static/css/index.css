@@ -254,8 +254,8 @@ footer {
 
     background: rgba(255, 255, 255, 0.096);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.18);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     border: 1px solid rgba(128, 128, 128, 0.5);
 }
 .tablet-card-2 {
@@ -273,8 +273,8 @@ footer {
 
     background: rgba(255, 255, 255, 0.096);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.18);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     border: 1px solid rgba(128, 128, 128, 0.5);
 }
 .tablet-card-3 {
@@ -292,43 +292,43 @@ footer {
 
     background: rgba(255, 255, 255, 0.096);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.18);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     border: 1px solid rgba(128, 128, 128, 0.5);
 }
 /* card-images */
 .img-tablet-1 {
     position: absolute;
-    background-image: url(/static/css/imgs/libronegro.png);
+    background-image: url(/static/css/imgs/bluebook.png);
     background-size: cover;
     width: 90px;
     height: 90px;
     z-index: -1;
 
     animation: anim 3s infinite;
-    filter: blur(3.5px);
+    filter: blur(1.5px);
 }
 .img-tablet-2 {
     position: absolute;
-    background-image: url(/static/css/imgs/musicanegro.png);
+    background-image: url(/static/css/imgs/bluemusic.png);
     background-size: cover;
     width: 90px;
     height: 90px;
     z-index: -1;
 
     animation: anim 3s infinite;
-    filter: blur(3.5px);
+    filter: blur(2px);
 }
 .img-tablet-3 {
     position: absolute;
-    background-image: url(/static/css/imgs/lapiznegro.png);
+    background-image: url(/static/css/imgs/bluepen.png);
     background-size: cover;
     width: 90px;
     height: 90px;
     z-index: -1;
 
     animation: anim 3s infinite;
-    filter: blur(3.5px);
+    filter: blur(1.5px);
 }
 
 .tablet-hyper-vin {
@@ -634,8 +634,8 @@ tbody td {
 
         background: rgba(255, 255, 255, 0.096);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.18);
-        backdrop-filter: blur(6px);
-        -webkit-backdrop-filter: blur(6px);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
         border: 1px solid rgba(128, 128, 128, 0.5);
     }
     .tablet-card-2 {
@@ -653,8 +653,8 @@ tbody td {
 
         background: rgba(255, 255, 255, 0.096);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.18);
-        backdrop-filter: blur(6px);
-        -webkit-backdrop-filter: blur(6px);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
         border: 1px solid rgba(128, 128, 128, 0.5);
     }
     .tablet-card-3 {
@@ -672,43 +672,43 @@ tbody td {
 
         background: rgba(255, 255, 255, 0.096);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.18);
-        backdrop-filter: blur(6px);
-        -webkit-backdrop-filter: blur(6px);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
         border: 1px solid rgba(128, 128, 128, 0.5);
     }
     /* card-images */
     .img-tablet-1 {
         position: absolute;
-        background-image: url(/static/css/imgs/libronegro.png);
+        background-image: url(/static/css/imgs/bluebook.png);
         background-size: cover;
         width: 90px;
         height: 90px;
         z-index: -1;
 
         animation: anim 3s infinite;
-        filter: blur(3.5px);
+        filter: blur(1.5px);
     }
     .img-tablet-2 {
         position: absolute;
-        background-image: url(/static/css/imgs/musicanegro.png);
+        background-image: url(/static/css/imgs/bluemusic.png);
         background-size: cover;
         width: 90px;
         height: 90px;
         z-index: -1;
 
         animation: anim 3s infinite;
-        filter: blur(4px);
+        filter: blur(2px);
     }
     .img-tablet-3 {
         position: absolute;
-        background-image: url(/static/css/imgs/lapiznegro.png);
+        background-image: url(/static/css/imgs/bluepen.png);
         background-size: cover;
         width: 90px;
         height: 90px;
         z-index: -1;
 
         animation: anim 3s infinite;
-        filter: blur(3.5px);
+        filter: blur(1.5px);
     }
     
     .tablet-hyper-vin {
@@ -1006,7 +1006,7 @@ tbody td {
     /* FOOTER DISPLAY */
     footer {
         display: block;
-        height: 70px;
+        height: 80px;
     }
 
 

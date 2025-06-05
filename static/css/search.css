@@ -3,8 +3,11 @@ body {
     font-family: sans-serif;
     height: 100dvh;
 
-    background: white;
-    /* background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgb(24, 3, 58) 50%, rgb(4, 7, 71) 100%); */
+    /* background-color: rgb(69, 116, 128); */
+    background-image: url(/static/css/imgs/mountain.jpg);
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(2.5px);
 }
 
 .main-header {
@@ -25,7 +28,7 @@ body {
     height: 30px;
 }
 h1 {
-    color: black;
+    color: white;
     margin-left: 15px;
 }
 
@@ -57,8 +60,9 @@ h1 {
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 550px;
+    height: 490px;
     overflow-y: scroll;
+    scrollbar-color: rgba(128, 128, 128, 0.192) transparent;
     /* background-color: red; */
 }
 
@@ -82,8 +86,8 @@ h1 {
 
 /* LIST */
 .table-2 {
-    width: 95%;
-    color: black;
+    width: 100%;
+    color: white;
     border-collapse: collapse;
     border-radius: 5px;
 }
@@ -185,4 +189,19 @@ h1 {
     background: #5e79ff;
     background: radial-gradient(circle,rgba(94, 121, 255, 1) 34%, rgba(140, 70, 252, 1) 100%);
     border: 1px solid gold;
+}
+
+
+
+@media (max-height: 1140px) and (max-width: 750px) {
+    .list-section {
+        height: 800px;
+    }
+}
+
+
+@media (max-width: 650px) {
+    .list-section {
+        height: 490px;
+    }
 }
