@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, url_for, redirect
 from hymnal import hymn
+from himnario import mi_himnario
 from functions import InputSong
 import pymysql
 
@@ -219,15 +220,40 @@ def add_data():
 
 
 # -----------------------------------------------------------------------------------------------
+# @app.route('/song', methods=['GET','POST'])
+# def songs():
+#     if request.method=='POST':
+#         song_name = request.form['songInput']
+        
+#         sheet = hymn['song'][song_name]
+            
+#         return render_template('song.html', ts=sheet) 
+
+
+
 @app.route('/song', methods=['GET','POST'])
 def songs():
     if request.method=='POST':
-        song_name = request.form['songInput']
-        
-        sheet = hymn['song'][song_name]
-        # main_image = hymn['song'][song_name]['chord_image']
+        try:
+            mi_lista = []
+
+            song_name = request.form['songInput']
             
-        return render_template('song.html', ts=sheet) #, img=main_image)
+            nombre_cancion = mi_himnario[song_name]['titulo']
+            tonalidad = mi_himnario[song_name]['tono']
+            introduccion = mi_himnario[song_name]['intro']
+
+            for i in mi_himnario[song_name]['activate'].keys():
+                mi_lista.append(mi_himnario[song_name]['activate'][f'{i}'])
+
+
+            return render_template('song_sheet.html',tema=nombre_cancion, 
+                                                tono=tonalidad,
+                                                intro=introduccion,
+                                                lista=mi_lista)
+        except:
+            return redirect(url_for("index"))
+
 
 
 @app.route('/tone', methods=['GET','POST'])

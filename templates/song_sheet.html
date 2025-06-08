@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/ss_layout.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header-div">
+        <div class="song-name-div">
+            <h1>{{ tema }}</h1>
+        </div>
+        <div class="tools-div">
+            <div class="tools">
+                <span style="font-weight: bold;">Tono: {{ tono }}</span>
+                <div class="radio-area">
+                    <div class="radio-div">
+                        <input type="radio" class="radio-input" value="mirar" name="myRadio" id="radio1" onclick="toWatch()" checked>
+                        <label for="radio1" class="radio-label">On</label>
+
+                        <input type="radio" class="radio-input" value="ocultar" name="myRadio" id="radio2" onclick="toUnwatch()">
+                        <label for="radio2" class="radio-label">Off</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- {% for x in prod %}
+        <span>{{ x }}</span>
+    {% endfor %} -->
+
+    <!-- FILTER 1 -->
+    <div class="body-div">
+        {% if lista[0]['key'] == 'True' %}
+            <div class="border-song">
+                <div class="table-div">
+                    <p class="ident">{{ lista[0]['ident'] }} <span>({{ intro }})</span></p>
+                    <div id="active-table">
+                        <table id="intro-table">
+                            {% for x in lista[0]['intro'] %}
+                                <tr>
+                                    <td>{{ x }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        {% else %}
+            <p style="display: none;"></p>
+        {% endif %}
+
+        <br>
+
+        <!-- FILTER 2 -->
+        {% if lista[1]['key'] == 'True' %}
+            <div class="border-song">
+                <div class="table-div">
+                    <p class="ident">{{ lista[1]['ident'] }}</p>
+                    {% if lista[1]['ident'] != 'Puente' %}
+                        <table class="body-table">
+                            {% for x in lista[1]['musical'] %}
+                                <tr>
+                                    <td>{{ x }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    {% else %}
+                        <div class="puente-div">
+                            <table class="body-table">
+                                {% for x in lista[1]['musical'] %}
+                                    <tr>
+                                        <td style="color: red;">{{ x }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+        {% else %}
+            <p style="display: none;"></p>
+        {% endif %}
+
+        <br>
+        
+        <!-- FILTER 3 -->
+        {% if lista[2]['key'] == 'True' %}
+            <div class="border-song">
+                <div class="table-div">
+                    <p class="ident">{{ lista[2]['ident'] }}</p>
+                    {% if lista[2]['ident'] != 'Puente' %}
+                        <table class="body-table">
+                            {% for x in lista[2]['musical'] %}
+                                <tr>
+                                    <td>{{ x }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    {% else %}
+                        <div class="puente-div">
+                            <table class="body-table">
+                                {% for x in lista[2]['musical'] %}
+                                    <tr>
+                                        <td style="color: red;">{{ x }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+        {% else %}
+            <p style="display: none;"></p>
+        {% endif %}
+
+        <br>
+
+        <!-- FILTER 4 -->
+        {% if lista[3]['key'] == 'True' %}
+            <div class="border-song">
+                <div class="table-div">
+                    <p class="ident">{{ lista[3]['ident'] }}</p>
+                    {% if lista[3]['ident'] != 'Puente' %}
+                        <table class="body-table">
+                            {% for x in lista[3]['musical'] %}
+                                <tr>
+                                    <td>{{ x }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    {% else %}
+                        <div class="puente-div">
+                            <table class="body-table">
+                                {% for x in lista[3]['musical'] %}
+                                    <tr>
+                                        <td style="color: red;">{{ x }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+        {% else %}
+            <p style="display: none;"></p>
+        {% endif %}
+
+        <br>
+
+        <!-- FILTER 5 -->
+        {% if lista[4]['key'] == 'True' %}
+            <div class="border-song">
+                <div class="table-div">
+                    <p class="ident">{{ lista[4]['ident'] }}</p>
+                    {% if lista[4]['ident'] != 'Puente' %}
+                        <table class="body-table">
+                            {% for x in lista[4]['musical'] %}
+                                <tr>
+                                    <td>{{ x }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    {% else %}
+                        <div class="puente-div">
+                            <table class="body-table">
+                                {% for x in lista[4]['musical'] %}
+                                    <tr>
+                                        <td style="color: red;">{{ x }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+        {% else %}
+            <p style="display: none;"></p>
+        {% endif %}
+
+        <br>
+
+        <!-- FILTER 6 -->
+        {% if lista[5]['key'] == 'True' %}
+            <div class="border-song">
+                <div class="table-div">
+                    <p class="ident">{{ lista[5]['ident'] }}</p>
+                    {% if lista[5]['ident'] != 'Puente' %}
+                        <table class="body-table">
+                            {% for x in lista[5]['musical'] %}
+                                <tr>
+                                    <td>{{ x }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    {% else %}
+                        <div class="puente-div">
+                            <table class="body-table">
+                                {% for x in lista[5]['musical'] %}
+                                    <tr>
+                                        <td style="color: red;">{{ x }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+        {% else %}
+            <p style="display: none;"></p>
+        {% endif %}
+
+        <br>
+
+        <!-- FILTER 7 -->
+        {% if lista[6]['key'] == 'True' %}
+            <div class="border-song">
+                <div class="table-div">
+                    <p class="ident">{{ lista[6]['ident'] }}</p>
+                    {% if lista[6]['ident'] != 'Puente' %}
+                        <table class="body-table">
+                            {% for x in lista[6]['musical'] %}
+                                <tr>
+                                    <td>{{ x }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    {% else %}
+                        <div class="puente-div">
+                            <table class="body-table">
+                                {% for x in lista[6]['musical'] %}
+                                    <tr>
+                                        <td style="color: red;">{{ x }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+        {% else %}
+            <p style="display: none;"></p>
+        {% endif %}
+
+        <br>
+
+        <!-- FILTER 8 -->
+        {% if lista[7]['key'] == 'True' %}
+            <div class="border-song">
+                <div class="table-div">
+                    <p class="ident">{{ lista[7]['ident'] }}</p>
+                    {% if lista[7]['ident'] != 'Puente' %}
+                        <table class="body-table">
+                            {% for x in lista[7]['musical'] %}
+                                <tr>
+                                    <td>{{ x }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    {% else %}
+                        <div class="puente-div">
+                            <table class="body-table">
+                                {% for x in lista[7]['musical'] %}
+                                    <tr>
+                                        <td style="color: red;">{{ x }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+        {% else %}
+            <p style="display: none;"></p>
+        {% endif %}
+
+        <br>
+
+        <!-- FILTER 9 -->
+        {% if lista[8]['key'] == 'True' %}
+            <div class="border-song">
+                <div class="table-div">
+                    <p class="ident">{{ lista[8]['ident'] }}</p>
+                    {% if lista[8]['ident'] != 'Puente' %}
+                        <table class="body-table">
+                            {% for x in lista[8]['musical'] %}
+                                <tr>
+                                    <td>{{ x }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    {% else %}
+                        <div class="puente-div">
+                            <table class="body-table">
+                                {% for x in lista[8]['musical'] %}
+                                    <tr>
+                                        <td style="color: red;">{{ x }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+        {% else %}
+            <p style="display: none;"></p>
+        {% endif %}
+
+        <br>
+
+        <!-- FILTER 10 -->
+        {% if lista[9]['key'] == 'True' %}
+            <div class="border-song">
+                <div class="table-div">
+                    <p class="ident">{{ lista[9]['ident'] }}</p>
+                    {% if lista[9]['ident'] != 'Puente' %}
+                        <table class="body-table">
+                            {% for x in lista[9]['musical'] %}
+                                <tr>
+                                    <td>{{ x }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    {% else %}
+                        <div class="puente-div">
+                            <table class="body-table">
+                                {% for x in lista[9]['musical'] %}
+                                    <tr>
+                                        <td style="color: red;">{{ x }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+        {% else %}
+            <p style="display: none;"></p>
+        {% endif %}
+
+    </div>
+
+</body>
+
+<script>
+    function toWatch() {
+        let myRadio1 = document.getElementById('radio1');
+        let introTable = document.getElementById('active-table');
+        let puente = document.getElementsByClassName('puente-div');
+        let myRaws = document.querySelectorAll('.body-table tr:nth-child(odd)');
+
+        if (myRadio1.checked == true) {
+            // INTRO TABLE
+            introTable.style.display = "flex";
+            // BRIDGE
+            for (let i=0; i<puente.length; i++) {
+                console.log(i);
+                puente[i].style.display = "flex";
+            }
+
+            myRaws.forEach(fila => {
+                fila.style.display = "flex";
+            });
+        }
+    }
+
+    function toUnwatch() {
+        let myRadio2 = document.getElementById('radio2');
+        let introTable = document.getElementById('active-table');
+        let puente = document.getElementsByClassName('puente-div');
+        let myRaws = document.querySelectorAll('.body-table tr:nth-child(odd)');
+
+        if (myRadio2.checked == true) {
+            // INTRO TABLE
+            introTable.style.display = "none";
+            // BRIDGE
+            for (let i=0; i<puente.length; i++) {
+                console.log(i);
+                puente[i].style.display = "none";
+            }
+            
+            
+            myRaws.forEach(fila => {
+                fila.style.display = "none";
+            });
+        }
+    }
+</script>
+
+</html>
