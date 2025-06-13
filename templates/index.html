@@ -41,36 +41,8 @@
 
         <br>
 
-        <div class="tablet-main-menu">
-            <div class="tablet-menu-space">
-                <div class="tablet-card-1">
-                    <div class="img-tablet-1"></div>
-                    <a href="{{ url_for('search') }}">
-                        <div class="tablet-hyper-vin">
-                            <p>Himnario</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="tablet-card-2">
-                    <div class="img-tablet-2"></div>
-                    <a href="">
-                        <div class="tablet-hyper-vin">
-                            <p>Acordes</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="tablet-card-3">
-                    <div class="img-tablet-3"></div>
-                    <a href="{{ url_for('selector') }}">
-                        <div class="tablet-hyper-vin">
-                            <p>Editar</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-
         <h4 class="program-msg">Programa general</h4>
+        
         <div class="table-section">
             <div>
                 <form action="/song" method="post" id="myHomeMethod">
@@ -78,30 +50,69 @@
                 </form>
             </div>
             <div class="table-div">
-                <table>
-                    <!-- <th class="table-head" colspan="2"></th> -->
-                    <tbody>
-                        {% for x in canciones %}
-                            <tr>
-                                {% if x[0] == "Bienvenida" or x[0] == "Especial" or x[0] == "Predicación" or x[0] == "Acción de gracias" or x[0] == "Otro" or x[0] == "Diezmo y ofrenda" %}
-                                    <td>
-                                        <div class="element-td">
-                                            <div id="nums-counter">{{ loop.index }}</div>
-                                            <div style="font-weight: bold; color: white; font-size: 17px;">{{ x[0] }} *</div>
-                                        </div>
-                                    </td>
-                                {% else %}
-                                    <td>
-                                        <div class="element-td">
-                                            <div id="nums-counter">{{ loop.index }}</div>
-                                            <div onclick="searchClick(this)">{{ x[0] }}</div>
-                                        </div>
-                                    </td>
-                                {% endif %}
-                            </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
+                <div class="margin-table">
+                    <table>
+                        <!-- <th class="table-head" colspan="2"></th> -->
+                        <tbody>
+                            {% for x in canciones %}
+                                <tr>
+                                    {% if x[0] == "Bienvenida" or x[0] == "Especial" or x[0] == "Predicación" or x[0] == "Acción de gracias" or x[0] == "Otro" or x[0] == "Diezmo y ofrenda" %}
+                                        <td>
+                                            <div class="element-td">
+                                                <div id="nums-counter">{{ loop.index }}</div>
+                                                <div style="font-weight: bold; color: white; font-size: 17px;">{{ x[0] }} *</div>
+                                            </div>
+                                        </td>
+                                    {% else %}
+                                        <td>
+                                            <div class="element-td">
+                                                <div id="nums-counter">{{ loop.index }}</div>
+                                                <div onclick="searchClick(this)">{{ x[0] }}</div>
+                                            </div>
+                                        </td>
+                                    {% endif %}
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="tablet-main-menu">
+                <div class="tablet-menu-space">
+                    <div class="tablet-card-1">
+                        <div class="img-tablet-1"></div>
+                        <a href="{{ url_for('search') }}">
+                            <div class="tablet-hyper-vin">
+                                <p>Himnario</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="tablet-card-2">
+                        <div class="img-tablet-2"></div>
+                        <a href="">
+                            <div class="tablet-hyper-vin">
+                                <p>Acordes</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="tablet-card-3">
+                        <div class="img-tablet-3"></div>
+                        <a href="{{ url_for('selector') }}">
+                            <div class="tablet-hyper-vin">
+                                <p>Editar</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="tablet-card-4">
+                        <div class="img-tablet-4"></div>
+                        <a href="">
+                            <div class="tablet-hyper-vin">
+                                <p>Proyectar</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
 
             <div class="circle-menu-div" id="circle-menu-div">

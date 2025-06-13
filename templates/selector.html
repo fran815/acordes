@@ -8,1253 +8,1270 @@
 </head>
 <body>
     <!-- <h1 class="main-title">Grupo de Alabanza</h1> -->
-     <div class="main-header">
+    <!-- <div class="main-header">
         <a class="back-btn" href="{{ url_for('index') }}">
             <div class="img-back"></div>
         </a>
         <h1 style="margin-left: 15px;">Crear lista</h1>
     </div>
 
-    <br>
+    <br> -->
 
     <div class="main-div">
-        <!-- --------------------------------------------EDIT WINDOW---------------------------------------------- -->
-        <div class="main-edit-window" id="main-edit-window">
-            <div class="close-edit-window">
-                <div class="close-area">
-                    <div id="close-img" onclick="closeEdition()">
-                        <p>X</p>
-                    </div>
-                </div>
-            </div>
-            <div class="edit-window">
-                <div class="edit-menu-area">
-                    <h4>¿Por cuál canción desea cambiar?</h4>
-                    <div class="song-changed-div">
-                        <input type="text" id="song-changed" disabled>
-                    </div>
-                    <div class="edit-buttons">
-                        <button onclick="updateSongForm()" id="save-id" disabled>Guardar cambio</button>
-                    </div>
-                    
-                    <!-- SEND THE ORDER TO UPDATE  -->
-                    <form action="/update" method="post" id="update-song-form">
-                        <input type="number" name="indx-change" id="indx-change" hidden>
-                        <input type="text" id="song_input2" name="songInput" hidden>
-                    </form>
-
-                    <div class="edit-table-area">
-                        
-                        <div class="searcher-div">
-                            <div class="radio-div" id="item-srch">
-                                <input type="radio" class="radio-input2" value="numero" name="myRadio" id="radio3">
-                                <label for="radio3" class="radio-label2" onclick="searchNumber2()">Número</label>
-
-                                <input type="radio" class="radio-input2" value="nombre" name="myRadio" id="radio4">
-                                <label for="radio4" class="radio-label2" onclick="searchName2()">Nombre</label>
-                            </div>
-                            <div id="item-srch">
-                                <input type="text" class="form-control" id="input-search-name2" placeholder="Buscar...">
-                                <input type="number" class="form-control" id="input-search-number2" placeholder="Buscar..." hidden>
-                            </div>
-                            <!-- <form action="">
-                                <input type="text" id="song_input2" name="songInput" hidden>
-                            </form> -->
-                        </div>
-
-                        <br>
-
-                        <div class="list-section">
-                            <table class="table-2">
-                                <th>Número</th>
-                                <th>Nombre</th>
-                                <tbody id="mytableBody-2">
-                                    <tr>
-                                        <td class="ltd-1">-</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Bienvenida</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">-</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Lectura</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">-</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Especial</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">-</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Predicación</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">-</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Acción de gracias</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">-</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Diezmo y ofrenda</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">-</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Otro</td>
-                                    </tr>
-
-
-                                    <tr>
-                                        <td class="ltd-1">1</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Amor es</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">2</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Lo debes compartir</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">3</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">El espíritu de Dios está</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">4</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Majestuoso</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">5</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Mi amado Jesús</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">6</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Tu amor por mi</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">7</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Vine a adorar a Dios</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">8</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Eres mi todo Dios</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">9</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Agnus Dei</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">10</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Ven espíritu ven</td>
-                                    </tr>
-                                    
-                                    <tr>
-                                        <td class="ltd-1">11</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Señor quién entrará</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">12</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Usa mi vida</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">13</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Que mi vida entera esté</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">14</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Quiero darte el honor</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">15</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Salmo 19 (La ley de Jehová)</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">16</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">A Jehová cantaré</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">17</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Solo en Jesús</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">18</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">10000 razones</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">19</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Cuán grande es Él</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">20</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Gozo por verte</td>
-                                    </tr>
-
-                                    <!-- 40 -->
-                                    <tr>
-                                        <td class="ltd-1">21</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Tu mirada</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">22</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Mantos y palmas</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">23</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Nehemías 9</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">24</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Tierra de Palestina</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">25</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Porque Él vive</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">26</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Bendito Jehová</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">27</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">No hay Dios (Cadena)</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">28</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Qué me puede dar perdón</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">29</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Dos ó tres</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">30</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">En la cruz</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">31</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Saliendo del pretorio</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">32</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Creo en Dios</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">33</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Dios cuide tu semana</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">34</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Somos el pueblo de Dios</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">35</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">La tumba le encerró</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">36</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Mas de ti</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">37</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Hay momentos</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">38</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Bueno es alabar</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">39</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Cuando llegue el final</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">40</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Eres limpio en la sangre</td>
-                                    </tr>
-
-                                    <!-- 60 -->
-                                    <tr>
-                                        <td class="ltd-1">41</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Tu fidelidad es grande</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">42</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Abre mis ojos</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">43</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">A Su tiempo</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">44</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Mi pensamiento eres tú</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">45</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Maravilloso es</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">46</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Dulces melodías</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">47</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Cristo rompe las cadenas</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">48</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Estoy cantando alegre</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">49</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Ven y deléitate</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">50</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Aleluya</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">51</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Unidos</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">52</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Al que me ciñe</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">53</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Dios manda lluvia</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">54</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Hacemos hoy</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">55</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">El señor es mi pastor</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">56</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Manos cariñosas</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">57</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Dios imparable</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">58</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Más tu luz me guiara</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">59</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Cada día</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">60</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Eres tú</td>
-                                    </tr>
-
-                                    <!-- 80 -->
-                                    <tr>
-                                        <td class="ltd-1">61</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Renuevame</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">62</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Una noche fue</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">63</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Exaltad</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">64</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Brilla mas que el sol</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">65</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">El rey ya viene</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">66</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Aquí estoy</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">67</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Temprano yo te buscaré</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">68</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Ese gozo que yo siento</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">69</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Dios esta aquí</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">70</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Ya pertenezco a Él</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">71</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Abres camino</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">72</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">La cancion del Espíritu</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">73</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Quiero darte gracias</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">74</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Gloria te doy</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">75</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Setenta veces siete</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">76</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">La cosecha</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">77</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Quiero alabarte</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">78</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Junto a la cruz</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">79</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Gracias</td>
-                                    </tr>
-
-
-                                    <!-- 100 -->
-                                    <tr>
-                                        <td class="ltd-1">80</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Yo te busco</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">81</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Llegó la navidad</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">82</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">El regalo de Dios</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">83</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Tu dejaste tu trono</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">84</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Alabanzas al rey</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">85</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Ve dilo en las montañas</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">86</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Qué niño es este</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">87</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Oh santisimo</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">88</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Noche de paz</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">89</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Muchas gracias Señor</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">90</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Llename</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">91</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Yo me rindo a Él</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">92</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Tu nombre levantaré</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">93</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Quiero darte las gracias</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">94</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Debemos esperar</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">95</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Pastor siervo de Dios</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">96</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Ofrendas de amor</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">97</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">El Dios que adoramos</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">98</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">No daré</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">99</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">En el monte calvario</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">100</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Eres mi rey</td>
-                                    </tr>
-
-                                    <!-- 120 -->
-                                    <tr>
-                                        <td class="ltd-1">101</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">La historia de Cristo</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">102</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Dios esta presente</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">103</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Dilo a Cristo</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">104</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Te necesito</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">105</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Enciende una luz</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">106</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Corazones siempre alegres</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">107</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Cerca mas cerca</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">108</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Firmes y adelante</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">109</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Siento su gloria</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">110</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Tú eres mi respirar</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">111</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Una linda canción</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">112</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Yo tengo gozo</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">113</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Danos un bello hogar</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">114</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Tomados de la mano</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">115</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Cristo es el señor de las naciones</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">116</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Grande es tu fidelidad</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">117</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Dios no nos trajo hasta aquí</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">118</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Te alabaré mi buen Jesús</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">120</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Cuan gloriosa será la mañana</td>
-                                    </tr>
-
-
-                                    <!-- 124 -->
-                                    <tr>
-                                        <td class="ltd-1">121</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Cristo te amo</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">122</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Junto a tí mi buen Señor</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">123</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Rey de gloria</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ltd-1">124</td>
-                                        <td class="ltd-2" onclick="mySelection2(this)">Se un ejemplo</td>
-                                    </tr>
-
-
-
-
-                                </tbody>
-                            </table>
-                            
-                        </div>
-
-                    </div>
-                </div>
-            </div>
+        <div class="main-header">
+            <a class="back-btn" href="{{ url_for('index') }}">
+                <div class="img-back"></div>
+            </a>
+            <h1 style="margin-left: 15px;">Crear lista</h1>
         </div>
-        <!-- ----------------------------------------------------------------------------------------------------- -->
 
-        <div class="table-main-sections" id="table-main-sections">
-            <h2>Selección de canciones</h2>
-            <div class="table-div">
-                <div class="light-div">
-                    <table class="table-1" id="myTable">
-                        <th colspan="4">Programa musical</th>
-                        <tbody id="table-selector">
-                            {% for x in myData %}
+        <!-- --------------------------------------------EDIT WINDOW---------------------------------------------- -->
+        <div class="body-div">
+            <div class="main-edit-window" id="main-edit-window">
+                <div class="close-edit-window">
+                    <div class="close-area">
+                        <div id="close-img" onclick="closeEdition()">
+                            <p>X</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="edit-window">
+                    <div class="edit-menu-area">
+                        <h4>¿Por cuál canción desea cambiar?</h4>
+                        <div class="song-changed-div">
+                            <input type="text" id="song-changed" disabled>
+                        </div>
+                        <div class="edit-buttons">
+                            <button onclick="updateSongForm()" id="save-id" disabled>Guardar cambio</button>
+                        </div>
+                        
+                        <!-- SEND THE ORDER TO UPDATE  -->
+                        <form action="/update" method="post" id="update-song-form">
+                            <input type="number" name="indx-change" id="indx-change" hidden>
+                            <input type="text" id="song_input2" name="songInput" hidden>
+                        </form>
+
+                        <div class="edit-table-area">
+                            
+                            <div class="searcher-div">
+                                <div class="radio-div" id="item-srch">
+                                    <input type="radio" class="radio-input2" value="numero" name="myRadio" id="radio3">
+                                    <label for="radio3" class="radio-label2" onclick="searchNumber2()">Número</label>
+
+                                    <input type="radio" class="radio-input2" value="nombre" name="myRadio" id="radio4">
+                                    <label for="radio4" class="radio-label2" onclick="searchName2()">Nombre</label>
+                                </div>
+                                <div id="item-srch">
+                                    <input type="text" class="form-control" id="input-search-name2" placeholder="Buscar...">
+                                    <input type="number" class="form-control" id="input-search-number2" placeholder="Buscar..." hidden>
+                                </div>
+                                <!-- <form action="">
+                                    <input type="text" id="song_input2" name="songInput" hidden>
+                                </form> -->
+                            </div>
+
+                            <br>
+
+                            <div class="list-section-2">
+                                <table class="table-2">
+                                    <thead>
+                                        <tr>
+                                            <th>Número</th>
+                                            <th>Nombre</th>
+                                         </tr>
+                                    </thead>
+                                    <tbody id="mytableBody-2">
+                                        <tr>
+                                            <td class="ltd-1">-</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Bienvenida</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">-</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Lectura</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">-</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Especial</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">-</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Predicación</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">-</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Acción de gracias</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">-</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Diezmo y ofrenda</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">-</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Otro</td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td class="ltd-1">1</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Amor es</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">2</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Lo debes compartir</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">3</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">El espíritu de Dios está</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">4</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Majestuoso</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">5</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Mi amado Jesús</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">6</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Tu amor por mi</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">7</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Vine a adorar a Dios</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">8</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Eres mi todo Dios</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">9</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Agnus Dei</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">10</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Ven espíritu ven</td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td class="ltd-1">11</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Señor quién entrará</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">12</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Usa mi vida</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">13</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Que mi vida entera esté</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">14</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Quiero darte el honor</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">15</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Salmo 19 (La ley de Jehová)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">16</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">A Jehová cantaré</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">17</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Solo en Jesús</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">18</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">10000 razones</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">19</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Cuán grande es Él</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">20</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Gozo por verte</td>
+                                        </tr>
+
+                                        <!-- 40 -->
+                                        <tr>
+                                            <td class="ltd-1">21</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Tu mirada</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">22</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Mantos y palmas</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">23</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Nehemías 9</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">24</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Tierra de Palestina</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">25</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Porque Él vive</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">26</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Bendito Jehová</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">27</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">No hay Dios (Cadena)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">28</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Qué me puede dar perdón</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">29</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Dos ó tres</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">30</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">En la cruz</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">31</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Saliendo del pretorio</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">32</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Creo en Dios</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">33</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Dios cuide tu semana</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">34</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Somos el pueblo de Dios</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">35</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">La tumba le encerró</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">36</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Mas de ti</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">37</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Hay momentos</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">38</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Bueno es alabar</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">39</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Cuando llegue el final</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">40</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Eres limpio en la sangre</td>
+                                        </tr>
+
+                                        <!-- 60 -->
+                                        <tr>
+                                            <td class="ltd-1">41</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Tu fidelidad es grande</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">42</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Abre mis ojos</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">43</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">A Su tiempo</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">44</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Mi pensamiento eres tú</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">45</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Maravilloso es</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">46</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Dulces melodías</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">47</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Cristo rompe las cadenas</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">48</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Estoy cantando alegre</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">49</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Ven y deléitate</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">50</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Aleluya</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">51</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Unidos</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">52</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Al que me ciñe</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">53</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Dios manda lluvia</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">54</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Hacemos hoy</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">55</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">El señor es mi pastor</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">56</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Manos cariñosas</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">57</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Dios imparable</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">58</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Más tu luz me guiara</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">59</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Cada día</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">60</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Eres tú</td>
+                                        </tr>
+
+                                        <!-- 80 -->
+                                        <tr>
+                                            <td class="ltd-1">61</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Renuevame</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">62</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Una noche fue</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">63</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Exaltad</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">64</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Brilla mas que el sol</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">65</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">El rey ya viene</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">66</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Aquí estoy</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">67</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Temprano yo te buscaré</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">68</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Ese gozo que yo siento</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">69</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Dios esta aquí</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">70</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Ya pertenezco a Él</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">71</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Abres camino</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">72</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">La cancion del Espíritu</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">73</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Quiero darte gracias</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">74</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Gloria te doy</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">75</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Setenta veces siete</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">76</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">La cosecha</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">77</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Quiero alabarte</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">78</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Junto a la cruz</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">79</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Gracias</td>
+                                        </tr>
+
+
+                                        <!-- 100 -->
+                                        <tr>
+                                            <td class="ltd-1">80</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Yo te busco</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">81</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Llegó la navidad</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">82</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">El regalo de Dios</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">83</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Tu dejaste tu trono</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">84</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Alabanzas al rey</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">85</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Ve dilo en las montañas</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">86</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Qué niño es este</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">87</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Oh santisimo</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">88</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Noche de paz</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">89</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Muchas gracias Señor</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">90</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Llename</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">91</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Yo me rindo a Él</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">92</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Tu nombre levantaré</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">93</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Quiero darte las gracias</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">94</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Debemos esperar</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">95</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Pastor siervo de Dios</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">96</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Ofrendas de amor</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">97</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">El Dios que adoramos</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">98</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">No daré</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">99</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">En el monte calvario</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">100</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Eres mi rey</td>
+                                        </tr>
+
+                                        <!-- 120 -->
+                                        <tr>
+                                            <td class="ltd-1">101</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">La historia de Cristo</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">102</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Dios esta presente</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">103</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Dilo a Cristo</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">104</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Te necesito</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">105</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Enciende una luz</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">106</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Corazones siempre alegres</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">107</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Cerca mas cerca</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">108</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Firmes y adelante</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">109</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Siento su gloria</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">110</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Tú eres mi respirar</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">111</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Una linda canción</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">112</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Yo tengo gozo</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">113</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Danos un bello hogar</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">114</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Tomados de la mano</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">115</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Cristo es el señor de las naciones</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">116</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Grande es tu fidelidad</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">117</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Dios no nos trajo hasta aquí</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">118</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Te alabaré mi buen Jesús</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">120</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Cuan gloriosa será la mañana</td>
+                                        </tr>
+
+
+                                        <!-- 124 -->
+                                        <tr>
+                                            <td class="ltd-1">121</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Cristo te amo</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">122</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Junto a tí mi buen Señor</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">123</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Rey de gloria</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ltd-1">124</td>
+                                            <td class="ltd-2" onclick="mySelection2(this)">Se un ejemplo</td>
+                                        </tr>
+
+
+
+
+                                    </tbody>
+                                </table>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ----------------------------------------------------------------------------------------------------- -->
+
+            <div class="table-main-sections" id="table-main-sections">
+                <h2>Selección de canciones</h2>
+                <div class="table-div">
+                    <div class="light-div">
+                        <table class="table-1" id="myTable">
+                            <thead>
+                                <tr>
+                                    <th colspan="4">Programa musical</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table-selector">
+                                {% for x in myData %}
+                                <tr>
+                                    <td class="td-0">
+                                        <!-- {{ loop.index }} -->
+                                        {{ x[0] }}
+                                    </td>
+                                    <td class="td-1">
+                                        {{ x[1] }}
+                                    </td>
+                                    <td class="td-2" onclick="editRow()">
+                                        <!-- <p id="edit-btn">Editar</p> -->
+                                        <div class="edit-img"></div>
+                                    </td>
+                                    <td class="td-3" onclick="deleteRow()">
+                                        <!-- <p id="oneDelet-btn">Eliminar</p> -->
+                                        <div class="trash-img"></div>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                        <form action="">
+                            <input type="text" id="edit-item" placeholder="edit" hidden>
+                        </form>
+                        <form action="/delete" method="post" id="del-form">
+                            <input type="text" id="delet-item" name="song-deleted" hidden>
+                        </form>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="btn-section">
+                    <div>
+                        <button class="changeBtn" id="save-btn" onclick="saveList()">Guardar cambios</button>
+                    </div>
+                    <div>
+                        <button class="changeBtn" id="delet-btn" onclick="deleteList()">Limpiar lista</button>
+                    </div>
+                </div>
+                <div>
+                    <form action="/add_changes" method="post" id="addChanges-form">
+                        <input type="text" id="save-changes" name="save-changes" hidden>
+                    </form>
+                    <form action="/delete_all" method="post" id="deleteAll-form">
+                        <input type="text" id="delete-response" name="delete-response" hidden>
+                    </form>
+                </div>
+            </div>
+
+            <div class="list-main-section" id="list-main-section">
+                <!-- <div id="list-title">
+                    <h2>Buscador</h2>
+                </div> -->
+                <div class="searcher-div">
+                    <div class="radio-div" id="item-srch">
+                        <input type="radio" class="radio-input" value="numero" name="myRadio" id="radio1">
+                        <label for="radio1" class="radio-label" onclick="searchNumber()">Número</label>
+
+                        <input type="radio" class="radio-input" value="nombre" name="myRadio" id="radio2">
+                        <label for="radio2" class="radio-label" onclick="searchName()">Nombre</label>
+                    </div>
+                    <div id="item-srch">
+                        <input type="text" class="form-control" id="input-search-name" placeholder="Buscar...">
+                        <input type="number" class="form-control" id="input-search-number" placeholder="Buscar..." hidden>
+                    </div>
+                    <form action="/add" method="post" id="myForm">
+                        <input type="text" id="song_input" name="songInput" hidden>
+                    </form>
+                </div>
+
+                <br>
+
+                <div class="name-data">
+                    <div class="col-data">
+                        <div class="col-name-1">
+                            <p>Número</p>
+                        </div>
+                        <div class="col-name-2">
+                            <p>Nombre</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-section">
+                    <table class="table-2">
+                        <!-- <th>Número</th>
+                        <th>Nombre</th> -->
+                        <tbody id="mytableBody">
                             <tr>
-                                <td class="td-0">
-                                    <!-- {{ loop.index }} -->
-                                    {{ x[0] }}
-                                </td>
-                                <td class="td-1">
-                                    {{ x[1] }}
-                                </td>
-                                <td class="td-2" onclick="editRow()">
-                                    <!-- <p id="edit-btn">Editar</p> -->
-                                    <div class="edit-img"></div>
-                                </td>
-                                <td class="td-3" onclick="deleteRow()">
-                                    <!-- <p id="oneDelet-btn">Eliminar</p> -->
-                                    <div class="trash-img"></div>
-                                </td>
+                                <td class="ltd-1">-</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Bienvenida</td>
                             </tr>
-                            {% endfor %}
+                            <tr>
+                                <td class="ltd-1">-</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Lectura</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">-</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Especial</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">-</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Predicación</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">-</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Acción de gracias</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">-</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Diezmo y ofrenda</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">-</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Otro</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">1</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Amor es</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">2</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Lo debes compartir</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">3</td>
+                                <td class="ltd-2" onclick="mySelection(this)">El espíritu de Dios está</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">4</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Majestuoso</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">5</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Mi amado Jesús</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">6</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Tu amor por mi</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">7</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Vine a adorar a Dios</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">8</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Eres mi todo Dios</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">9</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Agnus Dei</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">10</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Ven espíritu ven</td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="ltd-1">11</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Señor quién entrará</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">12</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Usa mi vida</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">13</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Que mi vida entera esté</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">14</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Quiero darte el honor</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">15</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Salmo 19 (La ley de Jehová)</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">16</td>
+                                <td class="ltd-2" onclick="mySelection(this)">A Jehová cantaré</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">17</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Solo en Jesús</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">18</td>
+                                <td class="ltd-2" onclick="mySelection(this)">10000 razones</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">19</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Cuán grande es Él</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">20</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Gozo por verte</td>
+                            </tr>
+
+                            <!-- 40 -->
+                            <tr>
+                                <td class="ltd-1">21</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Tu mirada</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">22</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Mantos y palmas</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">23</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Nehemías 9</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">24</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Tierra de Palestina</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">25</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Porque Él vive</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">26</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Bendito Jehová</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">27</td>
+                                <td class="ltd-2" onclick="mySelection(this)">No hay Dios (Cadena)</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">28</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Qué me puede dar perdón</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">29</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Dos ó tres</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">30</td>
+                                <td class="ltd-2" onclick="mySelection(this)">En la cruz</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">31</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Saliendo del pretorio</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">32</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Creo en Dios</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">33</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Dios cuide tu semana</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">34</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Somos el pueblo de Dios</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">35</td>
+                                <td class="ltd-2" onclick="mySelection(this)">La tumba le encerró</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">36</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Mas de ti</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">37</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Hay momentos</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">38</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Bueno es alabar</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">39</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Cuando llegue el final</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">40</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Eres limpio en la sangre</td>
+                            </tr>
+
+                            <!-- 60 -->
+                            <tr>
+                                <td class="ltd-1">41</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Tu fidelidad es grande</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">42</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Abre mis ojos</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">43</td>
+                                <td class="ltd-2" onclick="mySelection(this)">A Su tiempo</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">44</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Mi pensamiento eres tú</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">45</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Maravilloso es</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">46</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Dulces melodías</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">47</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Cristo rompe las cadenas</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">48</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Estoy cantando alegre</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">49</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Ven y deléitate</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">50</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Aleluya</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">51</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Unidos</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">52</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Al que me ciñe</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">53</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Dios manda lluvia</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">54</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Hacemos hoy</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">55</td>
+                                <td class="ltd-2" onclick="mySelection(this)">El señor es mi pastor</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">56</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Manos cariñosas</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">57</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Dios imparable</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">58</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Más tu luz me guiara</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">59</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Cada día</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">60</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Eres tú</td>
+                            </tr>
+
+                            <!-- 80 -->
+                            <tr>
+                                <td class="ltd-1">61</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Renuevame</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">62</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Una noche fue</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">63</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Exaltad</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">64</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Brilla mas que el sol</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">65</td>
+                                <td class="ltd-2" onclick="mySelection(this)">El rey ya viene</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">66</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Aquí estoy</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">67</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Temprano yo te buscaré</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">68</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Ese gozo que yo siento</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">69</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Dios esta aquí</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">70</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Ya pertenezco a Él</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">71</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Abres camino</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">72</td>
+                                <td class="ltd-2" onclick="mySelection(this)">La cancion del Espíritu</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">73</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Quiero darte gracias</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">74</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Gloria te doy</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">75</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Setenta veces siete</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">76</td>
+                                <td class="ltd-2" onclick="mySelection(this)">La cosecha</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">77</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Quiero alabarte</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">78</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Junto a la cruz</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">79</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Gracias</td>
+                            </tr>
+
+
+                            <!-- 100 -->
+                            <tr>
+                                <td class="ltd-1">80</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Yo te busco</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">81</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Llegó la navidad</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">82</td>
+                                <td class="ltd-2" onclick="mySelection(this)">El regalo de Dios</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">83</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Tu dejaste tu trono</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">84</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Alabanzas al rey</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">85</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Ve dilo en las montañas</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">86</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Qué niño es este</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">87</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Oh santisimo</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">88</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Noche de paz</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">89</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Muchas gracias Señor</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">90</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Llename</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">91</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Yo me rindo a Él</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">92</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Tu nombre levantaré</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">93</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Quiero darte las gracias</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">94</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Debemos esperar</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">95</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Pastor siervo de Dios</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">96</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Ofrendas de amor</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">97</td>
+                                <td class="ltd-2" onclick="mySelection(this)">El Dios que adoramos</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">98</td>
+                                <td class="ltd-2" onclick="mySelection(this)">No daré</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">99</td>
+                                <td class="ltd-2" onclick="mySelection(this)">En el monte calvario</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">100</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Eres mi rey</td>
+                            </tr>
+
+                            <!-- 120 -->
+                            <tr>
+                                <td class="ltd-1">101</td>
+                                <td class="ltd-2" onclick="mySelection(this)">La historia de Cristo</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">102</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Dios esta presente</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">103</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Dilo a Cristo</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">104</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Te necesito</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">105</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Enciende una luz</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">106</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Corazones siempre alegres</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">107</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Cerca mas cerca</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">108</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Firmes y adelante</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">109</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Siento su gloria</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">110</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Tú eres mi respirar</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">111</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Una linda canción</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">112</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Yo tengo gozo</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">113</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Danos un bello hogar</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">114</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Tomados de la mano</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">115</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Cristo es el señor de las naciones</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">116</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Grande es tu fidelidad</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">117</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Dios no nos trajo hasta aquí</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">118</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Te alabaré mi buen Jesús</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">120</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Cuan gloriosa será la mañana</td>
+                            </tr>
+
+
+                            <!-- 124 -->
+                            <tr>
+                                <td class="ltd-1">121</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Cristo te amo</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">122</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Junto a tí mi buen Señor</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">123</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Rey de gloria</td>
+                            </tr>
+                            <tr>
+                                <td class="ltd-1">124</td>
+                                <td class="ltd-2" onclick="mySelection(this)">Se un ejemplo</td>
+                            </tr>
+
                         </tbody>
                     </table>
-                    <form action="">
-                        <input type="text" id="edit-item" placeholder="edit" hidden>
-                    </form>
-                    <form action="/delete" method="post" id="del-form">
-                        <input type="text" id="delet-item" name="song-deleted" hidden>
-                    </form>
+                    
                 </div>
-            </div>
-
-            <br>
-
-            <div class="btn-section">
-                <div>
-                    <button class="changeBtn" id="save-btn" onclick="saveList()">Guardar cambios</button>
-                </div>
-                <div>
-                    <button class="changeBtn" id="delet-btn" onclick="deleteList()">Limpiar lista</button>
-                </div>
-            </div>
-            <div>
-                <form action="/add_changes" method="post" id="addChanges-form">
-                    <input type="text" id="save-changes" name="save-changes" hidden>
-                </form>
-                <form action="/delete_all" method="post" id="deleteAll-form">
-                    <input type="text" id="delete-response" name="delete-response" hidden>
-                </form>
-            </div>
-        </div>
-
-        <div class="list-main-section" id="list-main-section">
-            <!-- <div id="list-title">
-                <h2>Buscador</h2>
-            </div> -->
-            <div class="searcher-div">
-                <div class="radio-div" id="item-srch">
-                    <input type="radio" class="radio-input" value="numero" name="myRadio" id="radio1">
-                    <label for="radio1" class="radio-label" onclick="searchNumber()">Número</label>
-
-                    <input type="radio" class="radio-input" value="nombre" name="myRadio" id="radio2">
-                    <label for="radio2" class="radio-label" onclick="searchName()">Nombre</label>
-                </div>
-                <div id="item-srch">
-                    <input type="text" class="form-control" id="input-search-name" placeholder="Buscar...">
-                    <input type="number" class="form-control" id="input-search-number" placeholder="Buscar..." hidden>
-                </div>
-                <form action="/add" method="post" id="myForm">
-                    <input type="text" id="song_input" name="songInput" hidden>
-                </form>
-            </div>
-
-            <br>
-
-            <div class="name-data">
-                <div class="col-data">
-                    <div class="col-name-1">
-                        <p>Número</p>
-                    </div>
-                    <div class="col-name-2">
-                        <p>Nombre</p>
-                    </div>
-                </div>
-            </div>
-            <div class="list-section">
-                <table class="table-2">
-                    <!-- <th>Número</th>
-                    <th>Nombre</th> -->
-                    <tbody id="mytableBody">
-                        <tr>
-                            <td class="ltd-1">-</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Bienvenida</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">-</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Lectura</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">-</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Especial</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">-</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Predicación</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">-</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Acción de gracias</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">-</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Diezmo y ofrenda</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">-</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Otro</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">1</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Amor es</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">2</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Lo debes compartir</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">3</td>
-                            <td class="ltd-2" onclick="mySelection(this)">El espíritu de Dios está</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">4</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Majestuoso</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">5</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Mi amado Jesús</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">6</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Tu amor por mi</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">7</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Vine a adorar a Dios</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">8</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Eres mi todo Dios</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">9</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Agnus Dei</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">10</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Ven espíritu ven</td>
-                        </tr>
-                        
-                        <tr>
-                            <td class="ltd-1">11</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Señor quién entrará</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">12</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Usa mi vida</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">13</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Que mi vida entera esté</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">14</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Quiero darte el honor</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">15</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Salmo 19 (La ley de Jehová)</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">16</td>
-                            <td class="ltd-2" onclick="mySelection(this)">A Jehová cantaré</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">17</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Solo en Jesús</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">18</td>
-                            <td class="ltd-2" onclick="mySelection(this)">10000 razones</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">19</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Cuán grande es Él</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">20</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Gozo por verte</td>
-                        </tr>
-
-                        <!-- 40 -->
-                        <tr>
-                            <td class="ltd-1">21</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Tu mirada</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">22</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Mantos y palmas</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">23</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Nehemías 9</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">24</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Tierra de Palestina</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">25</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Porque Él vive</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">26</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Bendito Jehová</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">27</td>
-                            <td class="ltd-2" onclick="mySelection(this)">No hay Dios (Cadena)</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">28</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Qué me puede dar perdón</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">29</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Dos ó tres</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">30</td>
-                            <td class="ltd-2" onclick="mySelection(this)">En la cruz</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">31</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Saliendo del pretorio</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">32</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Creo en Dios</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">33</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Dios cuide tu semana</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">34</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Somos el pueblo de Dios</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">35</td>
-                            <td class="ltd-2" onclick="mySelection(this)">La tumba le encerró</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">36</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Mas de ti</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">37</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Hay momentos</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">38</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Bueno es alabar</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">39</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Cuando llegue el final</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">40</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Eres limpio en la sangre</td>
-                        </tr>
-
-                        <!-- 60 -->
-                        <tr>
-                            <td class="ltd-1">41</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Tu fidelidad es grande</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">42</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Abre mis ojos</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">43</td>
-                            <td class="ltd-2" onclick="mySelection(this)">A Su tiempo</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">44</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Mi pensamiento eres tú</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">45</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Maravilloso es</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">46</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Dulces melodías</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">47</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Cristo rompe las cadenas</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">48</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Estoy cantando alegre</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">49</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Ven y deléitate</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">50</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Aleluya</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">51</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Unidos</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">52</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Al que me ciñe</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">53</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Dios manda lluvia</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">54</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Hacemos hoy</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">55</td>
-                            <td class="ltd-2" onclick="mySelection(this)">El señor es mi pastor</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">56</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Manos cariñosas</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">57</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Dios imparable</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">58</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Más tu luz me guiara</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">59</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Cada día</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">60</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Eres tú</td>
-                        </tr>
-
-                        <!-- 80 -->
-                        <tr>
-                            <td class="ltd-1">61</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Renuevame</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">62</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Una noche fue</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">63</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Exaltad</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">64</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Brilla mas que el sol</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">65</td>
-                            <td class="ltd-2" onclick="mySelection(this)">El rey ya viene</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">66</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Aquí estoy</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">67</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Temprano yo te buscaré</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">68</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Ese gozo que yo siento</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">69</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Dios esta aquí</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">70</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Ya pertenezco a Él</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">71</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Abres camino</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">72</td>
-                            <td class="ltd-2" onclick="mySelection(this)">La cancion del Espíritu</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">73</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Quiero darte gracias</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">74</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Gloria te doy</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">75</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Setenta veces siete</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">76</td>
-                            <td class="ltd-2" onclick="mySelection(this)">La cosecha</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">77</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Quiero alabarte</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">78</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Junto a la cruz</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">79</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Gracias</td>
-                        </tr>
-
-
-                        <!-- 100 -->
-                        <tr>
-                            <td class="ltd-1">80</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Yo te busco</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">81</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Llegó la navidad</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">82</td>
-                            <td class="ltd-2" onclick="mySelection(this)">El regalo de Dios</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">83</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Tu dejaste tu trono</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">84</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Alabanzas al rey</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">85</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Ve dilo en las montañas</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">86</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Qué niño es este</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">87</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Oh santisimo</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">88</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Noche de paz</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">89</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Muchas gracias Señor</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">90</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Llename</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">91</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Yo me rindo a Él</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">92</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Tu nombre levantaré</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">93</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Quiero darte las gracias</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">94</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Debemos esperar</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">95</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Pastor siervo de Dios</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">96</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Ofrendas de amor</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">97</td>
-                            <td class="ltd-2" onclick="mySelection(this)">El Dios que adoramos</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">98</td>
-                            <td class="ltd-2" onclick="mySelection(this)">No daré</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">99</td>
-                            <td class="ltd-2" onclick="mySelection(this)">En el monte calvario</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">100</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Eres mi rey</td>
-                        </tr>
-
-                        <!-- 120 -->
-                        <tr>
-                            <td class="ltd-1">101</td>
-                            <td class="ltd-2" onclick="mySelection(this)">La historia de Cristo</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">102</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Dios esta presente</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">103</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Dilo a Cristo</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">104</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Te necesito</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">105</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Enciende una luz</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">106</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Corazones siempre alegres</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">107</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Cerca mas cerca</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">108</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Firmes y adelante</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">109</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Siento su gloria</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">110</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Tú eres mi respirar</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">111</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Una linda canción</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">112</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Yo tengo gozo</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">113</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Danos un bello hogar</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">114</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Tomados de la mano</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">115</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Cristo es el señor de las naciones</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">116</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Grande es tu fidelidad</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">117</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Dios no nos trajo hasta aquí</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">118</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Te alabaré mi buen Jesús</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">120</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Cuan gloriosa será la mañana</td>
-                        </tr>
-
-
-                        <!-- 124 -->
-                        <tr>
-                            <td class="ltd-1">121</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Cristo te amo</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">122</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Junto a tí mi buen Señor</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">123</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Rey de gloria</td>
-                        </tr>
-                        <tr>
-                            <td class="ltd-1">124</td>
-                            <td class="ltd-2" onclick="mySelection(this)">Se un ejemplo</td>
-                        </tr>
-
-                    </tbody>
-                </table>
-                
             </div>
         </div>
 

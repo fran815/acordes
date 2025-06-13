@@ -2,6 +2,7 @@ body {
     margin: 0;
     /* height: 100dvh; */
     font-family: sans-serif;
+    
 }
 .body-div {
     margin-top: 120px;
@@ -11,6 +12,16 @@ body {
 
 
 /* HEADER DIV */
+.button-area {
+    width: 30px;
+    height: 30px;
+}
+.img-div {
+    background-image: url(/static/css/imgs/back.png);
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+}
 .header-div h1 {margin: 0; color: white; margin: 10px;}
 .header-div {
     position: fixed;
@@ -21,6 +32,8 @@ body {
     width: 100%;
 }
 .song-name-div {
+    display: flex;
+    align-items: center;
     width: 100%;
     background-color: black;
 }

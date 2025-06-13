@@ -1,7 +1,8 @@
+.circle-menu-div {display: none;}
+
 body {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     margin: 0;
     height: 100dvh;
@@ -10,105 +11,11 @@ body {
     overflow-y: hidden;
     overflow-x: hidden;
 
-    /* background-color: white; */
     background-image: url(/static/css/imgs/mountain.jpg);
     background-size: cover;
     background-position: center;
     
 }
-
-/* .first-ball {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    top: 540px;
-    right: 25px;
-    width: 370px;
-    height: 370px;
-    overflow: hidden;
-    z-index: -1;
-
-    border-radius: 50%;
-    background-color: rgb(175, 175, 175);
-}
-.first-ball::before {
-    content: "";
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    width: 370px;
-    height: 370px;
-    border-radius: 50%;
-
-    background-image: conic-gradient(red 20deg, gold 120deg);
-    animation: rotar 2s linear infinite;
-}
-.first-ball::after {
-    content: "";
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 366px;
-    height: 366px;
-    border-radius: 50%;
-    margin-top: 2px;
-
-    color: white;
-    background: linear-gradient(112deg,rgb(255, 189, 67) 0%, rgb(228, 91, 0) 100%);
-}
-
-
-@keyframes rotar {
-    from{
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(-360deg);
-    }
-}
-
-.second-ball {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    top: 180px;
-    left: 50px;
-    width: 220px;
-    height: 220px;
-    overflow: hidden;
-    z-index: -1;
-
-    border-radius: 50%;
-    background-color: rgb(175, 175, 175);
-}   
-.second-ball::before {
-    content: "";
-    position: absolute;
-    width: 220px;
-    height: 220px;
-    background-image: conic-gradient(gold 220deg, red 250deg);
-    animation: rotar2 2s linear infinite;
-}
-.second-ball::after {
-    content: "";
-    position: absolute;
-    width: 218px;
-    height: 218px;
-    margin-top: 1px;
-
-    border-radius: 50%;
-    background: linear-gradient(112deg,rgb(228, 91, 0) 0%, rgb(255, 189, 67) 100%);
-}
-
-@keyframes rotar2 {
-    from{
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-} */
 
 
 /* FOOTER */
@@ -167,7 +74,6 @@ footer {
     height: 85%;
 
     margin-top: 25px;
-
 }
 
 
@@ -178,7 +84,6 @@ footer {
     width: 100%;
 
     color: white;
-    /* background-color: rgba(0, 0, 0, 1); */
     background-color: transparent;
     z-index: 100;
 }
@@ -191,7 +96,6 @@ footer {
     display: flex;
     width: 100%;
     color: white;
-    /* text-align: center; */
 }
 
 
@@ -213,7 +117,7 @@ footer {
 
 .program-msg {
     font-size: 19px;
-    margin-left: 30px;
+    margin-left: 20px;
     margin-block: 10px;
 
     color: white;
@@ -221,31 +125,32 @@ footer {
 
 /* TABLET DIV MENU */
 .tablet-main-menu {
-    position: absolute;
-    top: 130px;
-    right: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 550px;
-    height: 450px;
+    width: 50%;
+    height: 480px;
+    margin-left: auto;
 
-    /* background-color: red; */
 }
 .tablet-menu-space {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 80px;  /* Agrega espacio entre las celdas */
+    
+
     width: 100%;
-    height: 90%;
+    margin-block: 5px;
 
     /* background-color: gray; */
 }
 .tablet-card-1 {
     display: flex;
     justify-content: center;
+    justify-self: right;
     align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
+    
     width: 200px;
     height: 190px;
 
@@ -261,10 +166,9 @@ footer {
 .tablet-card-2 {
     display: flex;
     justify-content: center;
+    justify-self: left;
     align-items: center;
-    position: absolute;
-    top: 0;
-    right: 0;
+    
     width: 200px;
     height: 190px;
 
@@ -280,10 +184,26 @@ footer {
 .tablet-card-3 {
     display: flex;
     justify-content: center;
+    justify-self: right;
     align-items: center;
-    position: absolute;
-    bottom: 0;
-    left: 31.82%;
+    
+    width: 200px;
+    height: 190px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.096);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(128, 128, 128, 0.5);
+}
+.tablet-card-4 {
+    display: flex;
+    justify-content: center;
+    justify-self: left;
+    align-items: center;
     width: 200px;
     height: 190px;
 
@@ -329,6 +249,17 @@ footer {
 
     animation: anim 3s infinite;
     filter: blur(1.5px);
+}
+.img-tablet-4 {
+    position: absolute;
+    background-image: url(/static/css/imgs/video.png);
+    background-size: cover;
+    width: 130px;
+    height: 130px;
+    z-index: -1;
+
+    animation: anim 3s infinite;
+    filter: blur(2px);
 }
 
 .tablet-hyper-vin {
@@ -377,7 +308,6 @@ footer {
     width: 180px;
     margin-left: 20px;
 
-    /* color: rgb(177, 4, 4); */
     color: rgb(101, 186, 255);
 }
 .group-name-separ {
@@ -405,7 +335,6 @@ footer {
 .menu-option {
     display: flex;
     justify-content: center;
-    /* width: 50%; */
     align-items: center;
 
     margin-block: 5px;
@@ -422,26 +351,27 @@ a {
 /* TABLE */
 .table-section {
     display: flex;
-    width: 400px;
-    justify-content: center;
+    width: 100%;
 }
 .table-div {
     display: flex;
-    justify-content: center;
-    width: 100%;
+    justify-content: left;
+    width: 480px;
     height: 480px;
-    margin-left: 20px;
+}
+table {
+    width: 100%;
+    text-align: left;
+    font-size: 20px;
+}
+.margin-table {
+    width: 90%;
 
     overflow-y: scroll;
     scrollbar-color: rgba(128, 128, 128, 0.24) transparent;
 
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 10px;
-}
-table {
-    width: 95%;
-    text-align: left;
-    font-size: 20px;
 }
 tbody tr {
     height: 60px;
@@ -500,109 +430,13 @@ tbody td {
         overflow-x: hidden;
 
         background-color: white;
-        /* background: rgb(22, 2, 31);
-        background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgb(24, 3, 58) 50%, rgb(4, 7, 71) 100%); */
-        
     }
 
-    /* .first-ball {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        top: 540px;
-        right: 25px;
-        width: 370px;
-        height: 370px;
-        overflow: hidden;
-        z-index: -1;
-
-        border-radius: 50%;
-        background-color: rgb(175, 175, 175);
-    }
-    .first-ball::before {
-        content: "";
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        width: 370px;
-        height: 370px;
-        border-radius: 50%;
-
-        background-image: conic-gradient(red 20deg, gold 120deg);
-        animation: rotar 2s linear infinite;
-    }
-    .first-ball::after {
-        content: "";
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 368px;
-        height: 368px;
-        border-radius: 50%;
-        margin-top: 1px;
-
-        color: white;
-        background: #4075DA;
-        background: linear-gradient(112deg,rgb(255, 189, 67) 0%, rgb(228, 91, 0) 100%);
-    }
-
-
-    @keyframes rotar {
-        from{
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(-360deg);
-        }
-    }
-
-    .second-ball {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        top: 180px;
-        left: 50px;
-        width: 220px;
-        height: 220px;
-        overflow: hidden;
-        z-index: -1;
-
-        border-radius: 50%;
-        background-color: rgb(175, 175, 175);
-    }   
-    .second-ball::before {
-        content: "";
-        position: absolute;
-        width: 220px;
-        height: 220px;
-        background-image: conic-gradient(gold 220deg, red 250deg);
-        animation: rotar2 2s linear infinite;
-    }
-    .second-ball::after {
-        content: "";
-        position: absolute;
-        width: 218px;
-        height: 218px;
-        margin-top: 1px;
-
-        border-radius: 50%;
-        background: linear-gradient(112deg,rgb(228, 91, 0) 0%, rgb(255, 189, 67) 100%);
-    }
-
-    @keyframes rotar2 {
-        from{
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(360deg);
-        }
-    } */
 
     /* TABLET DIV MENU */
     .tablet-main-menu {
         position: absolute;
-        top: 130px;
+        top: 185px;
         right: 50px;
         display: flex;
         justify-content: center;
@@ -610,22 +444,21 @@ tbody td {
         width: 550px;
         height: 450px;
 
-        /* background-color: red; */
     }
     .tablet-menu-space {
-        display: flex;
-        width: 100%;
-        height: 90%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 80px;  /* Agrega espacio entre las celdas */
+        
 
-        /* background-color: gray; */
+        width: 100%;
     }
     .tablet-card-1 {
         display: flex;
         justify-content: center;
         align-items: center;
-        position: absolute;
-        top: 0;
-        left: 0;
+        
         width: 200px;
         height: 190px;
 
@@ -642,9 +475,7 @@ tbody td {
         display: flex;
         justify-content: center;
         align-items: center;
-        position: absolute;
-        top: 0;
-        right: 0;
+        
         width: 200px;
         height: 190px;
 
@@ -661,9 +492,7 @@ tbody td {
         display: flex;
         justify-content: center;
         align-items: center;
-        position: absolute;
-        bottom: 0;
-        left: 31.82%;
+        
         width: 200px;
         height: 190px;
 
@@ -756,8 +585,6 @@ tbody td {
         width: 100%;
 
         color: white;
-        /* background-color: red; */
-        /* background-color: transparent; */
         z-index: 100;
     }
     .main-header h1 {
@@ -768,7 +595,6 @@ tbody td {
     .theme-div {
         display: flex;
         width: 100%;
-        /* text-align: center; */
     }
 
     /* GROUP NAME (MAIN TITLE) */
@@ -833,7 +659,7 @@ tbody td {
     /* TABLE DIV */
     .program-msg {
         font-size: 19px;
-        margin-left: 35px;
+        margin-left: 20px;
         margin-block: 10px;
 
         color: white;
@@ -848,16 +674,9 @@ tbody td {
         justify-content: center;
         width: 100%;
         height: 480px;
-        margin-left: 20px;
-
-        overflow-y: scroll;
-        scrollbar-color: rgba(128, 128, 128, 0.5) transparent;
-
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        border-radius: 10px;
     }
     table {
-        width: 95%;
+        width: 100%;
         text-align: left;
         font-size: 20px;
     }
@@ -879,8 +698,6 @@ tbody td {
         
         background-color: rgba(175, 175, 175, 0.15);
         border: 1px solid rgba(255, 255, 255, 0.5);
-        /* background-color: rgba(255, 255, 255, 0.15);
-        border: 1px solid rgba(255, 255, 255, 0.25); */
         border-radius: 10px;
     }
     #nums-counter {
@@ -891,9 +708,42 @@ tbody td {
         font-size: 28px;
     }
 }
+
+
+
+
+
+
+
+@media (max-width:1080px) and (max-height:630px) {
+    .table-section {width: 100%;}
+    .table-div {
+        justify-content: left;
+    }
+    .margin-table {
+        width: 460px;
+        height: 360px;
+    }
+    .tablet-main-menu {
+        position: static;
+        width: 500px;
+        height: 300px;
+    }
+    .tablet-menu-space {
+        gap: 25px;
+    }
+}
+
+
+
+
+
+
+
+
 /* TABLET VERSION-HORIZONTAL */
-@media (max-width:1080px) {
-    /* THINGS TO HIDE */
+/* THINGS TO HIDE */
+@media (max-width:1020px) {
     footer {display: none;}
 
 
@@ -903,31 +753,21 @@ tbody td {
         top: 75%;
         right: 0;
 
-        /* background-color: red; */
     }
     .tablet-menu-space {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 35px;
+        
+
         width: 95%;
-        /* background-color: gray; */
+
     }
-    .tablet-card-1 {
-        position: relative;
-        width: 33.33%;
-        margin-inline: 7px;
-        /* left: 10px; */
-    }
-    .tablet-card-2 {
-        position: relative;
-        width: 33.33%;
-        margin-inline: 7px;
-        /* right: 10px; */
-    }
-    .tablet-card-3 {
-        position: relative;
-        width: 33.33%;
-        margin-inline: 7px;
-        top: 0;
-        left: 0;
-    }
+    .tablet-card-1 {justify-self: center;}
+    .tablet-card-2 {justify-self: center;}
+    .tablet-card-3 {justify-self: center;}
+    .tablet-card-4 {display: none;}
 }
 /* TABLET VERSION-HORIZONTAL */
 @media (max-height:750px) {
@@ -950,6 +790,7 @@ tbody td {
         height: 480px;
     }
 }
+
 
 
 
@@ -1010,105 +851,11 @@ tbody td {
     }
 
 
-    /* CIRCLES WALLPAPER */
-    /* .first-ball {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        top: 340px;
-        left: 200px;
-        width: 170px;
-        height: 170px;
-        overflow: hidden;
-
-        border-radius: 50%;
-        background-color: rgb(175, 175, 175);
-    }
-    .first-ball::before {
-        content: "";
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        width: 170px;
-        height: 170px;
-        border-radius: 50%;
-
-        background-image: conic-gradient(red 20deg, gold 120deg);
-        animation: rotar 2s linear infinite;
-    }
-    .first-ball::after {
-        content: "";
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 166px;
-        height: 166px;
-        border-radius: 50%;
-        margin-top: 2px;
-
-        color: white;
-        background: linear-gradient(112deg,rgb(255, 189, 67) 0%, rgb(228, 91, 0) 100%);
-    }
-
-
-    @keyframes rotar {
-        from{
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(-360deg);
-        }
-    }
-
-
-    .second-ball {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        top: 180px;
-        left: 20px;
-        width: 120px;
-        height: 120px;
-        overflow: hidden;
-
-        border-radius: 50%;
-        background-color: rgb(175, 175, 175);
-    }
-    .second-ball::before {
-        content: "";
-        position: absolute;
-        width: 120px;
-        height: 120px;
-        background-image: conic-gradient(gold 220deg, red 250deg);
-        animation: rotar2 2s linear infinite;
-    }
-    .second-ball::after {
-        content: "";
-        position: absolute;
-        width: 118px;
-        height: 118px;
-        margin-top: 1px;
-
-        border-radius: 50%;
-        background: linear-gradient(112deg,rgb(228, 91, 0) 0%, rgb(255, 189, 67) 100%);
-    }
-
-    @keyframes rotar2 {
-        from{
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(360deg);
-        }
-    } */
-
 
     /* TABLE SONGS */
     table {
-        width: 90%;
+        width: 100%;
         text-align: left;
-        margin-left: 0px;
         margin-block: 10px;
 
         border-collapse: collapse;
@@ -1147,19 +894,8 @@ tbody td {
         justify-content: center;
         width: 100%;
         height: 500px;
-        /* margin-left: 10px; */
-        margin-inline: 10px;
-
-        overflow-y: scroll;
-        scrollbar-color: rgba(128, 128, 128, 0.5) transparent;
-
-        background: rgba(255, 255, 255, 0.15);
-        border-radius: 16px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        border: 1px solid rgba(255, 255, 255, 0.15);
-
+        margin-left: 0px;
+        margin-inline: 0px;
     }
 
 
@@ -1241,11 +977,8 @@ tbody td {
         border-radius: 50%;
         outline: none;
         border: 1px solid rgba(173, 173, 173, 0.5);
-        /* box-shadow: 0 0 10px #9ecaed; */
         
         background-color: rgb(61, 116, 129);
-        /* background: #7981F1;
-        background: linear-gradient(100deg,rgb(113, 81, 255) 0%, rgb(49, 6, 207) 100%); */
     }
 
     /* circle images from CIRCLE OPTIONS */
